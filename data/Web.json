@@ -1,0 +1,167 @@
+[
+  {
+    "url": "https://vindioai.com/Home.html",
+    "Section": "HOME",
+    "content": "Vindio AI Software Ltd is a deep-tech company pioneering innovative artificial intelligence solutions across multiple domains."
+  },
+   {
+    "url": "https://vindioai.com/Home.html",
+    "Section": "HOME",
+    "content": "Our expertise spans computer vision, deep learning, large language models (LLMs) and custom AI chatbot development & deployment ."
+  },
+  {
+    "url": "https://vindioai.com/Home.html",
+    "Section": "HOME",
+    "content": "Recent Innovations Include: Quantum Vision Theory in Deep Learning, Intelligent AI Chatbot Solutions, Real-Time Driver Assistance System, Surveillance and Smart Monitoring"
+  },
+  {
+    "url": "https://vindioai.com/Home.html",
+    "Section": "HOME",
+    "content": "Inspired by quantum physics, Quantum Vision (QV) theory introduces a completely new perspective in deep learning. QV takes captured still images of objects and converts them into information wave functions using a deep learning module called the QV Block ."
+  },
+  {
+    "url": "https://vindioai.com/Home.html",
+    "Section": "HOME",
+    "content": "The QV Block can be integrated into: Convolutional Neural Networks (CNNs), Vision Transformers (ViTs) and Convolutional Vision Transformers (CCTs)."
+  },
+  {
+    "url": "https://vindioai.com/Home.html",
+    "Section": "HOME",
+    "content": "QV codes are open-source with AGPL-3.0 license in our GitHub page"
+  },
+  {
+    "url": "https://vindioai.com/Home.html",
+    "Section": "HOME",
+    "content": "Coming soon: QV Community Page for code examples, tutorials, workshops, news, and more."
+  },
+  {
+    "url": "https://vindioai.com/Home.html",
+    "Section": "HOME",
+    "content": "Intelligent AI Chatbot is Custom-built for websites and internal company knowledge management."
+  },
+  {
+    "url": "https://vindioai.com/Home.html",
+    "Section": "HOME",
+    "content": "Improve customer/employee experience with custom trained AI chatbots according to your needs!"
+  },
+  {
+    "url": "https://vindioai.com/Home.html",
+    "Section": "HOME",
+    "content": "Real-Time Driver Assistance System identifies safe and risky human behavior on the road using a single camera sensor.it is a custom-trained, open-source person detector, a fast, open-source object tracker ,and a Novel person behaviour Analysis"
+  },
+  {
+    "url": "https://vindioai.com/Home.html",
+    "Section": "HOME",
+    "content": "AI-powered surveillance for property/car park monitoring and security analytics for enhanced safety and efficiency."
+  },
+  {
+    "url": "https://vindioai.com/Home.html",
+    "Section": "HOME",
+    "content": "Company's location is ODTU KALTEV AR-GE Binası SH-3 99738 Kalkanli ,Güzelyurt, North Cyprus via Mersin 10 Turkiye"
+  },
+  {
+    "url": "https://vindioai.com/Projects.html",
+    "Section": "PROJECTS",
+    "content": "Real-Time Driver Warning System Based On Person Behaviour Analysis for Risky Situation Recognition (Demos and Minimum Viable Product (MVP) have been developed!"
+  },
+  {
+    "url": "https://vindioai.com/Projects.html",
+    "Section": "PROJECTS",
+    "content": "Developed a novel person situation recognition algorithm that can be easily integrated with any person detector and tracking algorithm for ADAS systems.Extracted novel features are trained with a lightweight neural network.Real-time inference performance with high accuracy."
+  }, 
+  {
+    "url": "https://vindioai.com/Projects.html",
+    "Section": "PROJECTS",
+    "content": "The complete ADAS system includes: Person detector neural network model: Our custom-trained model fully based on open-source libraries. Person tracker: A recent open-source tracker has been integrated.Person situation neural network model and post-processing: A lightweight model based on our novel algorithm (core contribution!)"
+  }, 
+  {
+    "url": "https://vindioai.com/Projects.html",
+    "Section": "PROJECTS",
+    "content": "Using the latest LLM models, we build and deploy custom AI Chatbots for websites and internal company knowledge management systems.Your website and documents are scanned, Latest AI models are specially trained exclusively on your data, 24/7 Assistant: Instantly responds to customer inquiries anytime Multilingual Responses"
+  }, 
+  {
+    "url": "https://vindioai.com/Projects.html",
+    "Section": "PROJECTS",
+    "content": "Currently working on our ADAS system to improve with a person/pedestrian action recognition algorithm based on a lightweight neural network model.Developed a novel person action recognition algorithm from low resolution front-camera sensor. The proposed product can also be easily integrated with any person detector and tracking algorithm for ADAS systems.Extracted novel person action features are trained with a lightweight neural network with promising results.Currently, collecting more semi-automatic annotations to generalize our neural network model."
+  }, 
+  {
+    "url": "https://vindioai.com/Projects.html",
+    "Section": "PROJECTS",
+    "content": "Design and training of deep learning models for the surveillance domain, including intelligent monitoring systems for households, car parks, and similar environments, providing automated real-time warning and alert systems."
+  }, 
+  {
+    "url": "https://vindioai.com/Consultancy.html",
+    "Section": "CONSULTANCY",
+    "content": "With more than 20 years of academic research and project development experience, we can provide expert consultancy services in different software development projects including diverse data types, such as video, image, audio, text, IoT, and sensor data and more. We can provide expertise knowledge and know-how in the different fields."
+  }, 
+  {
+    "url": "https://vindioai.com/Consultancy.html",
+    "Section": "CONSULTANCY",
+    "content": "We provide consultancy in Computer vision, image/video processing field"
+  }, 
+  {
+    "url": "https://vindioai.com/Consultancy.html",
+    "Section": "CONSULTANCY",
+    "content": "We provide consultancy in Deep learning/machine learning: CNNs, LSTMs, Autoencoders, transformers, vision transformers, hybrid models, and other traditional AI methods such as SVM, KNN, and other fields"
+  }, 
+  {
+    "url": "https://vindioai.com/Consultancy.html",
+    "Section": "CONSULTANCY",
+    "content": "We provide consultancy in LLM, Natural language processing field"
+  }, 
+  {
+    "url": "https://vindioai.com/Consultancy.html",
+    "Section": "CONSULTANCY",
+    "content": "We provide consultancy in Web/mobile application development field"
+  }, 
+  {
+    "url": "https://vindioai.com/Consultancy.html",
+    "Section": "CONSULTANCY",
+    "content": "We provide consultancy in Semantic Web, retrieval and search interfaces field"
+  }, 
+  {
+    "url": "https://vindioai.com/Consultancy.html",
+    "Section": "CONSULTANCY",
+    "content": "We provide consultancy in Software development cycle, back-end, front-end, AI integration and database integration field"
+  }, 
+  {
+    "url": "https://vindioai.com/About_us.html",
+    "Section": "ABOUT US",
+    "content": "Vindio AI Software Ltd is a software company founded in Cyprus after 20 years of domestic and international (European) academic research and development (R&D) experience. "
+  }, 
+  {
+    "url": "https://vindioai.com/About_us.html",
+    "Section": "ABOUT US",
+    "content": "Vindio AI software Vindio AI is a software company based in Cyprus that develops and integrates artificial intelligence-focused computer software. We carry out our activities as a R&D company in ODTÜ KALTEV Technopark."
+  }, 
+  {
+    "url": "https://vindioai.com/About_us.html",
+    "Section": "ABOUT US",
+    "content": "Our artificial intelligence software utilizes modern approaches such as deep learning, machine learning, and more. "
+  }, 
+  {
+    "url": "https://vindioai.com/About_us.html",
+    "Section": "ABOUT US",
+    "content": "Vindio Ai Software Directors are Assoc.Prof.Dr Cem Dirkeoğlu and Prof.Dr Melike Şah Dirkeoğlu."
+  }, 
+  {
+    "url": "https://vindioai.com/About_us.html",
+    "Section": "ABOUT US",
+    "content": "Our projects include research, design, development, training, optimization and production of artificial intelligence models and algorithms working on video, image, audio, text, sensor data, internet of things data and various data types. Artificial intelligence solutions are created for areas such as computer vision, pattern recognition, natural language processing, signal/image/audio processing, voice recognition, object detection, prediction models, and more. "
+  }, 
+  {
+    "url": "https://vindioai.com/About_us.html",
+    "Section": "ABOUT US",
+    "content": "Summary of Our Activity Areas: Advanced Driver Assistance Systems, Autonomous Driving and Surveillance/Monitoring Systems"
+  }, 
+  {
+    "url": "https://vindioai.com/About_us.html",
+    "Section": "ABOUT US",
+    "content": "To summarize our fields of activities are: Advanced Driver Assistance Systems (ADAS)/autonomous driving,  traffic monitoring and surveillance/monitoring systems."
+  }, 
+  {
+    "url": "https://vindioai.com/About_us.html",
+    "Section": "ABOUT US",
+    "content": "Our Phone number is +90(542)8553716 and our email address is info@vindioai.com "
+  }
+]

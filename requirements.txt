@@ -1,0 +1,35 @@
+# Core LangChain (split packages)
+langchain>=0.2
+langchain-core>=0.2
+langchain-community>=0.2
+langchain-text-splitters>=0.2
+
+# Vector store
+faiss-cpu>=1.8.0
+
+# Embeddings via Optimum + ONNX Runtime
+optimum[onnxruntime]>=1.20.0
+onnxruntime>=1.18.0
+numpy>=1.24
+transformers>=4.44
+huggingface_hub>=0.24
+
+# API & server
+fastapi>=0.110
+uvicorn[standard]>=0.30
+pydantic>=2.7
+
+# HTTP requests
+requests>=2.31
+
+# Database
+SQLAlchemy>=2.0
+psycopg[binary]>=3.1
+
+# Scheduling
+apscheduler>=3.10
+pytz>=2024.1
+
+# Email (SendGrid)
+sendgrid>=6.11.0
+

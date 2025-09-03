@@ -1,0 +1,2554 @@
+[
+  {
+    "Page_no": "1",
+    "Section": "Abstract",
+    "content": "We introduce a new perspective and a theory, called Quantum Vision (QV) theory in deep learning, for object recognition. The proposed theory is based on particle-wave duality of quantum physics."
+  },
+  {
+    "Page_no": "1",
+    "Section": "Abstract",
+    "content": "In quantum-scale, an object appears as a wave until it is observed, but after observation the object collapses into a solid object, called particle."
+  },
+  {
+    "Page_no": "1",
+    "Section": "Abstract",
+    "content": "In quantum world, every object has a ‘wave function’ that contains all the information about the object permitted by the uncertainty principle."
+  },
+  {
+    "Page_no": "1",
+    "Section": "Abstract",
+    "content": "Quantum-scale world looks different from our human-scale world. Attempts to relate the microscopic quantum world to our macroscopic world led to philosophical issues and questions."
+  },
+  {
+    "Page_no": "1",
+    "Section": "Abstract",
+    "content": "But what if the objects in human-scale world such as cats, dogs and bicycles have wave functions as well? And what will happen if we feed waves of objects to Deep Neural Networks (DNN) instead of collapsed still images of objects captured by cameras? This is the main contribution of our work."
+  },
+  {
+    "Page_no": "1",
+    "Section": "Abstract",
+    "content": "Inspired from quantum physics, we introduce a new perspective and theory, called Quantum Vision (QV) theory in deep learning that is a completely new perspective for object recognition."
+  },
+  {
+    "Page_no": "1",
+    "Section": "Abstract",
+    "content": "The proposed QV theory takes captured still images of objects, and converts them to information wave functions using a deep learning block that is called QV block. The proposed QV block is integrated into sequential CNNs, vision transformers and convolutional vision transformer to generate QV model variants for object classification."
+  },
+  {
+    "Page_no": "1",
+    "Section": "Abstract",
+    "content": "Extensive experiments are carried out on several datasets, and results demonstrate that QV model variants perform consistently better than standalone versions."
+  },
+  {
+    "Page_no": "1",
+    "Section": "Introduction",
+    "content": "Object recognition is one of the fundamental tasks in computer vision. This is a challenging task because of variances such as image resolution, lightening conditions, scale, pose and rotation."
+  },
+  {
+    "Page_no": "1",
+    "Section": "Introduction",
+    "content": "To tackle this problem, so far, many deep learning models are proposed for object recognition, including models based on Convolutional Neural Networks (CNNs), Vision Transformers (ViTs), Convolutional ViTs and Compact Convolutional Transformers (CCTs)."
+  },
+  {
+    "Page_no": "1",
+    "Section": "Introduction",
+    "content": "Among various CNN models, AlexNet [1], VGG variants (VGG16, VGG19) [2], GoogLeNet (Inception) [3], ResNet variants (including ResNet50/101/152 [4], ResNeXt [5]), DenseNet [6], MobileNet [7], EfficientNet [8], SqueezeNet [9], NASNet [10] and Xception [11] are widely used models."
+  },
+  {
+    "Page_no": "1",
+    "Section": "Introduction",
+    "content": "CNNs are well-suited for extracting local patterns at different scales and capturing spatial hierarchies."
+  },
+  {
+    "Page_no": "1",
+    "Section": "Introduction",
+    "content": "With the success of attention networks [12] in natural language processing (i.e. BERT [13] and GPT-3 [14]), transformer-based models are introduced for image recognition as well. Particularly, vision transformers [15] are proposed for various image recognition tasks."
+  },
+  {
+    "Page_no": "1",
+    "Section": "Introduction",
+    "content": "Different from CNNs, vision transformers [16] do not contain convolutional layers."
+  },
+  {
+    "Page_no": "1",
+    "Section": "Introduction",
+    "content": "There are different vision transformers variants like ViT [16], Transformer iN Transformer (TNT) [17], pyramidal transformers [18] and DeiT [19]."
+  },
+  {
+    "Page_no": "1",
+    "Section": "Introduction",
+    "content": "Generally ViTs divide the image into patches/windows and use each patch/window as a self-attention mechanism to extract inherent features."
+  },
+  {
+    "Page_no": "2",
+    "Section": "Introduction",
+    "content": "Recently, Convolutional Vision Transformers[19], [20], [21], [22] started to be popular since they combine strengths of convolution operation for effective local feature extraction and self-attention for capturing global context and relationships."
+  },
+  {
+    "Page_no": "2",
+    "Section": "Introduction",
+    "content": "All of the mentioned deep learning models rely on still images, captured by cameras, for feature extraction and recognition."
+  },
+  {
+    "Page_no": "2",
+    "Section": "Introduction",
+    "content": "In this work, we introduce a new perspective and a theory, called Quantum Vision (QV) theory in deep learning, we are inspired from quantum physics, especially particle-wave duality of quantum-scale objects [23], [24]."
+  },
+  {
+    "Page_no": "2",
+    "Section": "Introduction",
+    "content": "According to the quantum physics, quantum-scale objects have dual nature; quantum-scale objects can appear as wave at one moment and at another moment can appear as a particle."
+  },
+  {
+    "Page_no": "2",
+    "Section": "Introduction",
+    "content": "Unmeasured, unobserved particles behave as waves that contains all the information about the object. As soon as, an object is observed, it behaves like a particle."
+  },
+  {
+    "Page_no": "2",
+    "Section": "Introduction",
+    "content": "The relation between a particle and wave is the observation or measurement."
+  },
+  {
+    "Page_no": "2",
+    "Section": "Introduction",
+    "content": "What if human-scale objects also have dual nature? which means human-scale objects, such as cats, dogs, and bicycles, have wave functions that contains all the information about themself, and when we capture them with a camera, they collapse to still images just like particles."
+  },
+  {
+    "Page_no": "2",
+    "Section": "Introduction",
+    "content": "Generally, these still images are fed to various deep learning models for feature extraction and classification."
+  },
+  {
+    "Page_no": "2",
+    "Section": "Introduction",
+    "content": "What if, we feed waves of objects into deep learning models rather than collapsed still images. Such waves of objects may contain more information about the object that is tried to be recognized."
+  },
+  {
+    "Page_no": "2",
+    "Section": "Introduction",
+    "content": "This is the contribution of the proposed work."
+  },
+  {
+    "Page_no": "2",
+    "Section": "Introduction",
+    "content": "Inspired from the quantum physics, we introduce a new perspective and theory, called Quantum Vision (QV) theory in deep learning that creates information wave functions of objects within a Deep Neural Networks (DNNs)."
+  },
+  {
+    "Page_no": "2",
+    "Section": "Introduction",
+    "content": "In our work, information waves are fed to DNNs, instead of still images."
+  },
+  {
+    "Page_no": "2",
+    "Section": "Introduction",
+    "content": "The proposed QV block can be integrated to various DNN models such as CNNs, ViTs and CCTs."
+  },
+  {
+    "Page_no": "2",
+    "Section": "Introduction",
+    "content": "We believe that using object wave functions as an input to DNNs will be more similar to human vision system. In a human vision system, light wave enters the eye, then passes through the biological neural neurons in the brain, and then ‘collapses’ into a solid object in visual cortex area that can be recognized and located."
+  },
+  {
+    "Page_no": "2",
+    "Section": "Introduction",
+    "content": "Using the quantum physics analogy, we develop a mathematical model for deep learning that creates information wave functions for each object using the proposed QV block, and input these wave functions to DNNs for classification."
+  },
+  {
+    "Page_no": "2",
+    "Section": "Introduction",
+    "content": "The proposed QV block takes a still original image of an object, and convert to wave functions inspired from the analogy in quantum physics [23]"
+  },
+  {
+    "Page_no": "2",
+    "Section": "Introduction",
+    "content": "The proposed QV block can be integrated into various deep learning architectures including sequential CNNs, vision transformers and convolutional vision transformers."
+  },
+  {
+    "Page_no": "2",
+    "Section": "Introduction",
+    "content": "To demonstrate its effectiveness, extensive experiments are conducted on three datasets, namely Cifar-10, Cifar-100, and Fashion Mnist with various QV combinations, such as QV with CNNs, QV with Vision Transformer and QV with Convolutional Vision Transformer."
+  },
+  {
+    "Page_no": "2",
+    "Section": "Introduction",
+    "content": "Results demonstrate that these QV model variants perform consistently better than standalone versions (when still images are fed) and perform well without any transfer learning."
+  },
+  {
+    "Page_no": "2",
+    "Section": "Introduction",
+    "content": "The proposed QV model codes are available upon request for academic research purposes. For commercial use or related inquiries, please contact the corresponding author."
+  },
+  {
+    "Page_no": "2",
+    "Section": "Introduction",
+    "content": "The contributions of the proposed work can be summarized as follows:"
+  },
+  {
+    "Page_no": "2",
+    "Section": "Introduction",
+    "content": "Proposing a new perspective and a theory, QV theory in deep learning, for object recognition."
+  },
+  {
+    "Page_no": "2",
+    "Section": "Introduction",
+    "content": "Inspired from particle-wave duality of quantum-scale objects, we develop a mathematical model using deep learning called QV block that is the main contribution of the paper."
+  },
+  {
+    "Page_no": "2",
+    "Section": "Introduction",
+    "content": "The proposed QV block converts still images of objects into information wave functions."
+  },
+  {
+    "Page_no": "2",
+    "Section": "Introduction",
+    "content": "Information wave functions are then fed to various deep learning models rather than still images."
+  },
+  {
+    "Page_no": "2",
+    "Section": "Introduction",
+    "content": "The proposed QV theory is implementation within a deep learning model that enables integration of the QV block to various deep learning models."
+  },
+  {
+    "Page_no": "2",
+    "Section": "Introduction",
+    "content": "Experiments demonstrate that when information waves of objects are fed to CNNs, Vision Transformers and Convolutional Vision Transformers, accuracy increases consistently."
+  },
+  {
+    "Page_no": "2",
+    "Section": "Introduction",
+    "content": "Evaluations also indicate that QV block increases accuracy both on low- and high-resolution images."
+  },
+  {
+    "Page_no": "2",
+    "Section": "Introduction",
+    "content": "The rest of the paper is organized as follows:"
+  },
+  {
+    "Page_no": "2",
+    "Section": "Introduction",
+    "content": "Section II is related work."
+  },
+  {
+    "Page_no": "2",
+    "Section": "Introduction",
+    "content": "Section III discusses the quantum theory, particle-wave duality, human visual perception and the brain, quantum wave function and quantum numbers."
+  },
+  {
+    "Page_no": "2",
+    "Section": "Introduction",
+    "content": "Section IV introduces the proposed QV theory; mathematical formulation for generating information waves of objects and implementation of QV block."
+  },
+  {
+    "Page_no": "2",
+    "Section": "Introduction",
+    "content": "Section V demonstrates extensive evaluations on various datasets with and without QV block."
+  },
+  {
+    "Page_no": "2",
+    "Section": "Introduction",
+    "content": "Finally, it is conclusions and future work."
+  },
+  { 
+    "Page_no": "2", 
+    "Section": "Related Work", 
+    "content": "Object recognition is an important subject of computer vision." 
+  },
+  { 
+    "Page_no": "2", 
+    "Section": "Related Work", 
+    "content": "In this section, we briefly summarize the related work under different deep learning architectures for object recognition." 
+  },
+  { 
+  "Page_no": "2", 
+  "Section": "Related Work", 
+  "content": "Pure CNN models dominated image object recognition tasks for many years until the introduction of attention mechanisms." 
+  },
+  { 
+    "Page_no": "2", 
+    "Section": "Related Work", 
+    "content": "Among various CNN models, AlexNet [1], VGG variants (VGG16, VGG19) [2], GoogLeNet (inception) [3], ResNet variants including ResNet-50/101/152 [4], ResNeXt [5], DenseNet [6], MobileNet [7], EfficientNet [8], SqueezeNet [9], NASNet [10] and Xception [11] are widely used." 
+  },
+  { 
+    "Page_no": "2", 
+    "Section": "Related Work", 
+    "content": "AlexNet [1] is the first deep CNN architecture for large-scale ImageNet classification challenge that achieved significant results compared to previous works." 
+  },
+  { 
+    "Page_no": "2", 
+    "Section": "Related Work", 
+    "content": "VGG variants [2] are also deep CNN architectures with 3 × 3 convolutional filters that can go deeper in the network architecture." 
+  },
+  { 
+    "Page_no": "2", 
+    "Section": "Related Work", 
+    "content": "GoogLeNet [3] introduces the inception module that uses parallel operations within the same layer with different filter sizes (i.e. 1×1, 3×3, 5×5) to capture information at multiple scales." 
+  },
+  { 
+    "Page_no": "2", 
+    "Section": "Related Work", 
+    "content": "Then, features are concatenated before feeding to the next layer." 
+  },
+  { 
+    "Page_no": "3", 
+    "Section": "Related Work", 
+    "content": "ResNets [4] introduce residual blocks and shortcut/skip connections among the residual blocks to address the vanishing gradient problem as the network goes deeper." 
+  },
+  { 
+    "Page_no": "3", 
+    "Section": "Related Work", 
+    "content": "ResNeXt [5] on the other hand aggregates multiple pathways within a residual block." 
+  },
+  { 
+    "Page_no": "3", 
+    "Section": "Related Work", 
+    "content": "DenseNet [6] introduces dense blocks, bottleneck and transition layers to produce a unique network architecture for object classification." 
+  },
+  { 
+    "Page_no": "3", 
+    "Section": "Related Work", 
+    "content": "MobileNet [7] addresses computationally efficient CNNs for mobile and embedded devices by introducing depth-wise and 1 × 1 point-wise convolution operations." 
+  },
+  { 
+    "Page_no": "3", 
+    "Section": "Related Work", 
+    "content": "EfficientNet [8] introduces a new approach for scaling the network dimensions (i.e. width, depth, and resolution) simultaneously, aiming to balance model size, accuracy and computational complexity." 
+  },
+  { 
+    "Page_no": "3", 
+    "Section": "Related Work", 
+    "content": "Similarly, SqueezeNet [9] uses compact convolutional layers (i.e. 1 × 1 convolutions) in squeeze layers to decrease the number of network parameters for efficient and fast inferencing that is suitable for mobile devices." 
+  },
+  { 
+    "Page_no": "3", 
+    "Section": "Related Work", 
+    "content": "However, the network can achieve comparative results as larger CNN models." 
+  },
+  { 
+    "Page_no": "3", 
+    "Section": "Related Work", 
+    "content": "Similarly, NASNet [10] provides an automated neural architecture search mechanism to predict optimal CNN architecture designs according to the task." 
+  },
+  { 
+    "Page_no": "3", 
+    "Section": "Related Work", 
+    "content": "Xception [11] also provides computationally efficient network architecture design by introducing depth-wise separable convolutions." 
+  },
+  { 
+    "Page_no": "3", 
+    "Section": "Related Work", 
+    "content": "All these CNN models are proven to be effective on different datasets for object recognition." 
+  },
+  { 
+    "Page_no": "3", 
+    "Section": "Related Work", 
+    "content": "There are different variants of vision transformers; ViT [16], TNT [17], pyramidal transformer [18] and DeiT [19]." 
+  },
+  { 
+    "Page_no": "3", 
+    "Section": "Related Work", 
+    "content": "Generally, different vision transformer variants do not contain expensive convolution operation." 
+  },
+  { 
+    "Page_no": "3", 
+    "Section": "Related Work", 
+    "content": "However, they are data hungry and perform well with extensive volumes of data." 
+  },
+  { 
+    "Page_no": "3", 
+    "Section": "Related Work", 
+    "content": "Computational complexity of vision transformers can be high for high resolution images due to the self-attention mechanism." 
+  },
+  { 
+    "Page_no": "3", 
+    "Section": "Related Work", 
+    "content": "ViT [14] is the first proposed vision transformer model that divides the image into non-overlapping patches of size 16 × 16 and use each patch as a self-attention mechanism in a transformer encoder network with multi-layer perceptron (MLP) head." 
+  },
+  { 
+    "Page_no": "3", 
+    "Section": "Related Work", 
+    "content": "Patch position information is also encoded." 
+  },
+  { 
+    "Page_no": "3", 
+    "Section": "Related Work", 
+    "content": "During recognition tasks, self-attention allows to weight the importance of different patches." 
+  },
+  { 
+    "Page_no": "3", 
+    "Section": "Related Work", 
+    "content": "Patch sizes might differ for a specific task." 
+  },
+  { 
+    "Page_no": "3", 
+    "Section": "Related Work", 
+    "content": "Color images may also contain rich information about objects at different scales and locations." 
+  },
+  { 
+    "Page_no": "3", 
+    "Section": "Related Work", 
+    "content": "Fixed-sized patches of vision transformers [14] may not capture these fine-features." 
+  },
+  { 
+    "Page_no": "3", 
+    "Section": "Related Work", 
+    "content": "TNT [17] addresses this problem, by inserting transformers (smaller patches of 4 × 4)) inside transformers (patches of 16 × 16)." 
+  },
+  { 
+    "Page_no": "3", 
+    "Section": "Related Work", 
+    "content": "Therefore, more attention can be given to finer-details." 
+  },
+  { 
+    "Page_no": "3", 
+    "Section": "Related Work", 
+    "content": "Reference [18] are also proposed for training dense partitions using a shrinking pyramidal architecture that reduces the computational complexity of the transformer." 
+  },
+  { 
+    "Page_no": "3", 
+    "Section": "Related Work", 
+    "content": "Generally pre-trained vision transformers work well with extensive volumes of data and pre-trained models on ImageNet are used." 
+  },
+  { 
+    "Page_no": "3", 
+    "Section": "Related Work", 
+    "content": "In [19], data-efficient vision transformer (DeiT) is proposed to achieve similar performance without pre-training but using a convolutional teacher for knowledge distillation." 
+  },
+  { 
+    "Page_no": "3", 
+    "Section": "Related Work", 
+    "content": "Recently, strength of convolution operation for effective feature extraction is combined with transformers that captures global relations, called convolutional vision transformers [20], [21], [22]." 
+  },
+  { 
+    "Page_no": "3", 
+    "Section": "Related Work", 
+    "content": "[20] introduces CVT that introduces a convolutional projection into vision transformers by using a convolutional transformer block and a new convolutional token embedding." 
+  },
+  { 
+    "Page_no": "3", 
+    "Section": "Related Work", 
+    "content": "Compact Convolutional Transformers (CCTs) [21] aims to improve the performance (i.e. faster training times and higher accuracy) by adding convolutional blocks before tokenization and a new sequence pooling strategy." 
+  },
+  { 
+    "Page_no": "3", 
+    "Section": "Related Work", 
+    "content": "Reference [22] introduces a convolutional bias to vision transformers; a gate positional self-attention layer is introduced where it decides whether to behave as a convolutional layer or not based on the context." 
+  },
+  { 
+    "Page_no": "3", 
+    "Section": "Related Work", 
+    "content": "Recently, Quantum Convolutional Neural Networks (QCNNs) started to emerge." 
+  },
+  { 
+    "Page_no": "3", 
+    "Section": "Related Work", 
+    "content": "Particularly, QCNNs provide quantum circuits that is capable of performing quantum convolution operations on images in a quantum computer environment [25], [26], [27], [28], [29]." 
+  },
+  { 
+    "Page_no": "3", 
+    "Section": "Related Work", 
+    "content": "In our work, we introduce a novel QV theory in deep learning for object recognition, and it is not a quantum circuit design." 
+  },
+  { 
+    "Page_no": "3", 
+    "Section": "Related Work", 
+    "content": "Therefore, the proposed QV’s theory is completely different than QCNNs, but here we briefly discuss QCNN approaches to highlight this difference." 
+  },
+  { 
+    "Page_no": "3", 
+    "Section": "Related Work", 
+    "content": "In [25], QCNN is proposed where quantum circuits are introduced to perform quantum convolution operation in a quantum computer." 
+  },
+  { 
+    "Page_no": "3", 
+    "Section": "Related Work", 
+    "content": "However, experiments are very limited; only in MNIST dataset." 
+  },
+  { 
+    "Page_no": "3", 
+    "Section": "Related Work", 
+    "content": "Similarly, in [26], quantum circuits theory is proposed for potential QCNNs; quantum convolution and quantum pooling operations are discussed." 
+  },
+  { 
+    "Page_no": "3", 
+    "Section": "Related Work", 
+    "content": "No experiments are carried out." 
+  },
+  { 
+    "Page_no": "3", 
+    "Section": "Related Work", 
+    "content": "In [27], another QCNN is proposed for quantum computing; quantum optic elements such as quantum entanglement is incorporated into the convolution operation." 
+  },
+  { 
+    "Page_no": "3", 
+    "Section": "Related Work", 
+    "content": "Similarly, [28] also utilize QCNNs for data classification." 
+  },
+  { 
+    "Page_no": "3", 
+    "Section": "Related Work", 
+    "content": "In their work, they experimented various parameterized quantum circuits with different encodings such as amplitude encoding, qubic encoding, etc." 
+  },
+  { 
+    "Page_no": "3", 
+    "Section": "Related Work", 
+    "content": "Reference [29] proposes Quantum Dilated CNN (QDCNN) that is inspired from dilated CNN models." 
+  },
+  { 
+    "Page_no": "3", 
+    "Section": "Related Work", 
+    "content": "It is a hybrid method that applies dilated quantum convolution operations in a parameterized quantum circuit." 
+  },
+  { 
+    "Page_no": "3", 
+    "Section": "Related Work", 
+    "content": "Experiments on Mnist and Fashion Mnist datasets demonstrate that QDCNN performs better than CQNN in terms of accuracy and training times." 
+  },
+  { 
+    "Page_no": "3", 
+    "Section": "Related Work", 
+    "content": "All of the discussed quantum-based approaches focus on implementing quantum theory on a quantum circuit for quantum computing." 
+  },
+  { 
+    "Page_no": "3", 
+    "Section": "Related Work", 
+    "content": "On the other hand, in our work, we introduce a mathematical model using deep learning that creates wave functions for each object, and input these wave functions to DNNs for classification." 
+  },
+  { 
+    "Page_no": "3", 
+    "Section": "Related Work", 
+    "content": "The proposed QV theory takes a still original image of an object, and convert to wave functions inspired from the particle-wave duality in quantum physics [23], [24]." 
+  },
+  { 
+    "Page_no": "4", 
+    "Section": "Related Work", 
+    "content": "The proposed QV theory can be integrated into sequential CNNs, vision transformers and convolutional vision transformers." 
+  },
+  { 
+    "Page_no": "4", 
+    "Section": "Related Work", 
+    "content": "The theoretical formulation of the QV theory, for object recognition, is different from the existing QCNNs that design quantum circuits for quantum computing of CNNs." 
+  },
+  {
+    "Page_no": "4",
+    "Section": "QUANTUM THEORIES, PERCEPTION AND BRAIN",
+    "content": "A. HOWQUANTUM-SCALE OBJECTS PERCEIVED? ONGOING DEBATE IN QUANTUM WORLD"
+  },
+  {
+    "Page_no": "4",
+    "Section": "QUANTUM THEORIES, PERCEPTION AND BRAIN",
+    "content": "Around the end of 19th century, there were two ways of speaking about the things in the world of physics, Particles and Waves."
+  },
+  {
+    "Page_no": "4",
+    "Section": "QUANTUM THEORIES, PERCEPTION AND BRAIN",
+    "content": "Waves are continuous and particles are discrete, and they were completely different."
+  },
+  {
+    "Page_no": "4",
+    "Section": "QUANTUM THEORIES, PERCEPTION AND BRAIN",
+    "content": "There are changing opinions about whether the light is a wave or particle."
+  },
+  {
+    "Page_no": "4",
+    "Section": "QUANTUM THEORIES, PERCEPTION AND BRAIN",
+    "content": "At first, light was considered to be waves, not particles."
+  },
+  {
+    "Page_no": "4",
+    "Section": "QUANTUM THEORIES, PERCEPTION AND BRAIN",
+    "content": "A characteristic of waves is that they expand, spread, as well as interfere with other waves."
+  },
+  {
+    "Page_no": "4",
+    "Section": "QUANTUM THEORIES, PERCEPTION AND BRAIN",
+    "content": "However, about that time, a blackbody radiation experiment in papers [23], [24] conducted by Max Planck, using a box, revealed that light energy has discrete values."
+  },
+  {
+    "Page_no": "4",
+    "Section": "QUANTUM THEORIES, PERCEPTION AND BRAIN",
+    "content": "This was contradicting because light is a wave and its energy should therefore be continuous."
+  },
+  {
+    "Page_no": "4",
+    "Section": "QUANTUM THEORIES, PERCEPTION AND BRAIN",
+    "content": "After the observation of discrete behaviour of light energy, Albert Einstein stated that light is a particle."
+  },
+  {
+    "Page_no": "4",
+    "Section": "QUANTUM THEORIES, PERCEPTION AND BRAIN",
+    "content": "Albert Einstein conducted experiments, i.e. photoelectric effect and compton effect in papers [23], [24], to show that light is acting like a particle, and he was successful."
+  },
+  {
+    "Page_no": "4",
+    "Section": "QUANTUM THEORIES, PERCEPTION AND BRAIN",
+    "content": "The debate between particle and wave behaviour of light started, and Erwin Schrödinger introduced his equation [37] that can describe wave behaviour of light. They simply correspond to each other."
+  },
+  {
+    "Page_no": "4",
+    "Section": "QUANTUM THEORIES, PERCEPTION AND BRAIN",
+    "content": "However, Schrödinger’s wave equation was highly overlapping with Werner Hesienberg’s equation [23], [24] that has been formulated to describe the behaviour of electron as particle."
+  },
+  {
+    "Page_no": "4",
+    "Section": "QUANTUM THEORIES, PERCEPTION AND BRAIN",
+    "content": "The debate continued since there was not a clear answer whether the light is a particle or wave."
+  },
+  {
+    "Page_no": "4",
+    "Section": "QUANTUM THEORIES, PERCEPTION AND BRAIN",
+    "content": "Finally, Max Born stated that light is neither an ordinary wave nor an ordinary particle, but a wave of possibilities that can infer different characteristics of quantum scale objects [23], [24] such as probability of light particle’s position, linear/angular momentum and energy."
+  },
+  {
+    "Page_no": "4",
+    "Section": "QUANTUM THEORIES, PERCEPTION AND BRAIN",
+    "content": "Then, Hesienberg introduced an equation for uncertainty principle [23], [24] which declares that the position and momentum of a particle are uncertain and cannot be determined precisely."
+  },
+  {
+    "Page_no": "4",
+    "Section": "QUANTUM THEORIES, PERCEPTION AND BRAIN",
+    "content": "Schrödinger’s wave equation models light as an information wave, and describes how such a wave propagates."
+  },
+  {
+    "Page_no": "4",
+    "Section": "QUANTUM THEORIES, PERCEPTION AND BRAIN",
+    "content": "This was a radical revision of the physics of the world at very small scales, in which every object has a ‘wave function’."
+  },
+  {
+    "Page_no": "4",
+    "Section": "QUANTUM THEORIES, PERCEPTION AND BRAIN",
+    "content": "At this level, the world is inherently uncertain, attempts to relate the microscopic quantum world to our macroscopic classical world led to philosophical issues and questions."
+  },
+  {
+    "Page_no": "4",
+    "Section": "QUANTUM THEORIES, PERCEPTION AND BRAIN",
+    "content": "Experimentally quantum theory works very well, and today’s computer chips and lasers would not work without it."
+  },
+  {
+    "Page_no": "4",
+    "Section": "QUANTUM THEORIES, PERCEPTION AND BRAIN",
+    "content": "But what if the objects in human-scale world such as cats, dogs, bicycles and all other objects have wave functions as well?"
+  },
+  {
+    "Page_no": "4",
+    "Section": "QUANTUM THEORIES, PERCEPTION AND BRAIN",
+    "content": "That contains all the information about the object permitted by the uncertainty principle. This is the motivation of our work."
+  },
+  {
+    "Page_no": "4",
+    "Section": "QUANTUM THEORIES, PERCEPTION AND BRAIN",
+    "content": "Next, we will discuss about observation of quantum-scale objects with particle-wave duality. Then, discuss about the human vision system, brain and perception of human-scale objects."
+  },
+  {
+    "Page_no": "4",
+    "Section": "QUANTUM THEORIES, PERCEPTION AND BRAIN",
+    "content": "Next, we will discuss about observation of quantum-scale objects with particle-wave duality. Then, discuss about the human vision system, brain and perception of human-scale objects."
+  },
+  {
+    "Page_no": "4",
+    "Section": "QUANTUM THEORIES, PERCEPTION AND BRAIN",
+    "content": "Next, we will discuss about observation of quantum-scale objects with particle-wave duality. Then, discuss about the human vision system, brain and perception of human-scale objects."
+  },
+  {
+    "Page_no": "4",
+    "Section": "QUANTUM THEORIES, PERCEPTION AND BRAIN",
+    "content": "OBSERVATION OF QUANTUM-SCALE OBJECTS: PARTICLE-WAVE DUALITY"
+  },
+  {
+    "Page_no": "4",
+    "Section": "QUANTUM THEORIES, PERCEPTION AND BRAIN",
+    "content": "Particle-wave duality is the fundamental property of a quantum-scale object that appears like a wave at onemoment, andyetatanothermomentitappearslikeaparticle."
+  },
+  {
+    "Page_no": "4",
+    "Section": "QUANTUM THEORIES, PERCEPTION AND BRAIN",
+    "content": "Quantum scale objects (particles) have a dual nature."
+  },
+  {
+    "Page_no": "4",
+    "Section": "QUANTUM THEORIES, PERCEPTION AND BRAIN",
+    "content": "Depending on how we look at them they can behave as either particles or as waves."
+  },
+  {
+    "Page_no": "4",
+    "Section": "QUANTUM THEORIES, PERCEPTION AND BRAIN",
+    "content": "Particles can be described as separate, solid objects with specific locations in space."
+  },
+  {
+    "Page_no": "4",
+    "Section": "QUANTUM THEORIES, PERCEPTION AND BRAIN",
+    "content": "Waves, on the other hand, are not localized or solid, but are spread out."
+  },
+  {
+    "Page_no": "4",
+    "Section": "QUANTUM THEORIES, PERCEPTION AND BRAIN",
+    "content": "A mathematical model for quantum wave functions were described by Schrödinger’s wave equation [24]."
+  },
+  {
+    "Page_no": "4",
+    "Section": "QUANTUM THEORIES, PERCEPTION AND BRAIN",
+    "content": "Amazingly, what seems to make the difference, between a wave and a particle, is observation (or measurement)."
+  },
+  {
+    "Page_no": "4",
+    "Section": "QUANTUM THEORIES, PERCEPTION AND BRAIN",
+    "content": "Unmeasured, unobserved particles behave as waves that contains information about the object."
+  },
+  {
+    "Page_no": "4",
+    "Section": "QUANTUM THEORIES, PERCEPTION AND BRAIN",
+    "content": "As soon as, we subject them to observation in an experiment, they ‘collapses’ into a particle and can be located."
+  },
+  {
+    "Page_no": "4",
+    "Section": "QUANTUM THEORIES, PERCEPTION AND BRAIN",
+    "content": "The strange relationship between the behaviour of the particle and the people who observe it can be summarized as follows: when the particle is not being observed, it behaves like a wave; when it is observed, it behaves like a particle."
+  },
+  {
+    "Page_no": "4",
+    "Section": "QUANTUM THEORIES, PERCEPTION AND BRAIN",
+    "content": "C. HUMANVISION, PERCEPTION AND BRAIN"
+  },
+  {
+    "Page_no": "4",
+    "Section": "QUANTUM THEORIES, PERCEPTION AND BRAIN",
+    "content": "In human-scale world, when we see something, we see it in a shower of light waves."
+  },
+  {
+    "Page_no": "4",
+    "Section": "QUANTUM THEORIES, PERCEPTION AND BRAIN",
+    "content": "Light reflected from objects enter the eye through Cornea, then passes the Lens region, which bends the light rays, and then forms the reverted image on Retina."
+  },
+  {
+    "Page_no": "4",
+    "Section": "QUANTUM THEORIES, PERCEPTION AND BRAIN",
+    "content": "At this point, light rays are transformed to electrical signals and transmitted to brain via optical nerves."
+  },
+  {
+    "Page_no": "4",
+    "Section": "QUANTUM THEORIES, PERCEPTION AND BRAIN",
+    "content": "Signals pass through biological neural networks in the brain and the image appears to be perceived in Visual Cortex area."
+  },
+  {
+    "Page_no": "4",
+    "Section": "QUANTUM THEORIES, PERCEPTION AND BRAIN",
+    "content": "As signals passes through the biological neural networks, they are affected by the emotional state and past experiences of that person."
+  },
+  {
+    "Page_no": "4",
+    "Section": "QUANTUM THEORIES, PERCEPTION AND BRAIN",
+    "content": "Therefore, observer perceives/recognizes objects and their relations in the scene under subjective conditions."
+  },
+  {
+    "Page_no": "4",
+    "Section": "QUANTUM THEORIES, PERCEPTION AND BRAIN",
+    "content": "For example, which objects recognized in the scene at first may change from person to person."
+  },
+  {
+    "Page_no": "4",
+    "Section": "QUANTUM THEORIES, PERCEPTION AND BRAIN",
+    "content": "Each person may remember the same scene differently according to their past experiences and emotional states at the time of perception."
+  },
+  {
+    "Page_no": "4",
+    "Section": "QUANTUM THEORIES, PERCEPTION AND BRAIN",
+    "content": "Therefore, in human vision system, we observe/perceive the human-scale objects in Visual Cortex after the information passes through biological neural networks."
+  },
+  {
+    "Page_no": "4",
+    "Section": "QUANTUM THEORIES, PERCEPTION AND BRAIN",
+    "content": "Assuming that particle-wave duality exists for a human-scale object as well, the information wave function of an object (light wave) shortly enters the eye."
+  },
+  {
+    "Page_no": "4",
+    "Section": "QUANTUM THEORIES, PERCEPTION AND BRAIN",
+    "content": "It then passes through the biological neural networks in the brain, and then ‘collapses’ into a solid object in Visual Cortex area that can be recognized and located."
+  },
+  {
+    "Page_no": "4",
+    "Section": "QUANTUM THEORIES, PERCEPTION AND BRAIN",
+    "content": "On the other hand, in machines, the image formation happens in cameras, and then the image is given to machine vision system (i.e. Artificial Neural Networks) for object recognition/detection, etc."
+  },
+  {
+    "Page_no": "5",
+    "Section": "QUANTUM THEORIES, PERCEPTION AND BRAIN",
+    "content": "This is different from human visual perception where the final image appears in Visual Cortex after information passes through biological neural networks."
+  },
+  {
+    "Page_no": "5",
+    "Section": "QUANTUM THEORIES, PERCEPTION AND BRAIN",
+    "content": "This is an important gap and difference we employ in machine/computer vision systems."
+  },
+  {
+    "Page_no": "5",
+    "Section": "QUANTUM THEORIES, PERCEPTION AND BRAIN",
+    "content": "At this point the important question arrives as what will happen if we feed waves of objects to the deep neural networks (DNN) instead of collapsed final images in cameras?"
+  },
+  {
+    "Page_no": "5",
+    "Section": "QUANTUM THEORIES, PERCEPTION AND BRAIN",
+    "content": "And, how can we generate these waves for each object images so that the input to DNN becomes object waves, not a solid object?"
+  },
+  {
+    "Page_no": "5",
+    "Section": "QUANTUM THEORIES, PERCEPTION AND BRAIN",
+    "content": "In this work, we introduce a mathematical model that creates information wave functions for each object using a deep learning block."
+  },
+  {
+    "Page_no": "5",
+    "Section": "QUANTUM THEORIES, PERCEPTION AND BRAIN",
+    "content": "We then input these information waves of objects to DNNs for classification."
+  },
+  {
+    "Page_no": "5",
+    "Section": "QUANTUM THEORIES, PERCEPTION AND BRAIN",
+    "content": "The quantity with which quantum mechanics is concerned is the wave function Ψ of a body."
+  },
+  {
+    "Page_no": "5",
+    "Section": "QUANTUM THEORIES, PERCEPTION AND BRAIN",
+    "content": "According to Schrödinger’s wave equation in reference [23], Ψ itself has no physical interpretation."
+  },
+  {
+    "Page_no": "5",
+    "Section": "QUANTUM THEORIES, PERCEPTION AND BRAIN",
+    "content": "The square of its absolute magnitude, |Ψ|², evaluated at a particular place and time is proportional to the probability of finding the body there at that time."
+  },
+  {
+    "Page_no": "5",
+    "Section": "QUANTUM THEORIES, PERCEPTION AND BRAIN",
+    "content": "The linear momentum, angular momentum, and energy of the body are other quantities that can be established from Ψ."
+  },
+  {
+    "Page_no": "5",
+    "Section": "QUANTUM THEORIES, PERCEPTION AND BRAIN",
+    "content": "The problem of quantum mechanics is to determine Ψ for a body when its freedom of motion is limited by the action of external sources."
+  },
+  {
+    "Page_no": "5",
+    "Section": "QUANTUM THEORIES, PERCEPTION AND BRAIN",
+    "content": "Wave functions with the following properties can yield physically meaningful results when used in calculations, so only such ‘‘well behaved’’ wave functions are admissible as mathematical representations of real bodies:"
+  },
+  {
+    "Page_no": "5",
+    "Section": "QUANTUM THEORIES, PERCEPTION AND BRAIN",
+    "content": "• Ψ must be continuous and single-valued everywhere."
+  },
+  {
+    "Page_no": "5",
+    "Section": "QUANTUM THEORIES, PERCEPTION AND BRAIN",
+    "content": "• ∂Ψ/∂x, ∂Ψ/∂y, and ∂Ψ/∂z must be continuous and single-valued everywhere."
+  },
+  {
+    "Page_no": "5",
+    "Section": "QUANTUM THEORIES, PERCEPTION AND BRAIN",
+    "content": "• Ψ must be normalizable, which means that Ψ must go to 0 as x → ±∞, y → ±∞, z → ±∞ in order that ∭|Ψ|² dx dy dz over all space be a finite constant."
+  },
+  {
+    "Page_no": "5",
+    "Section": "QUANTUM THEORIES, PERCEPTION AND BRAIN",
+    "content": "Once Schöringer’s wave equation in reference [37] has been solved for a particle in a given physical situation, the resulting wave function Ψ is determined."
+},
+{
+    "Page_no": "5",
+    "Section": "QUANTUM THEORIES, PERCEPTION AND BRAIN",
+    "content": "This wave function Ψ contains all the information about the particle."
+},
+
+{
+    "Page_no": "5",
+    "Section": "QUANTUM THEORIES, PERCEPTION AND BRAIN",
+    "content": "This information is permitted by the uncertainty principle."
+},
+{
+  "Page_no": "5",
+  "Section": "QUANTUM THEORIES, PERCEPTION AND BRAIN",
+  "content": "In quantum physics, quantum numbers describe values of conserved quantities in the dynamics of a quantum system."
+},
+{
+  "Page_no": "5",
+  "Section": "QUANTUM THEORIES, PERCEPTION AND BRAIN",
+  "content": "The tally of quantum numbers varies from system to system and has no universal answer."
+},
+{
+  "Page_no": "5",
+  "Section": "QUANTUM THEORIES, PERCEPTION AND BRAIN",
+  "content": "Hence these parameters must be found for each system to be analyzed."
+},
+{
+  "Page_no": "5",
+  "Section": "QUANTUM THEORIES, PERCEPTION AND BRAIN",
+  "content": "A quantized system requires at least one quantum number."
+},
+{
+  "Page_no": "5",
+  "Section": "QUANTUM THEORIES, PERCEPTION AND BRAIN",
+  "content": "A quantum number identifies the state of a physical system such as an atom, a nucleus, or a subatomic particle."
+},
+{
+  "Page_no": "5",
+  "Section": "QUANTUM THEORIES, PERCEPTION AND BRAIN",
+  "content": "Quantum numbers refer generally to properties that are discrete (quantized) and conserved such as energy and momentum.."
+},
+{
+  "Page_no": "5",
+  "Section": "QUANTUM THEORIES, PERCEPTION AND BRAIN",
+  "content": "For example, there are three main quantum numbers to describe a Hydrogen atom/electron completely."
+},
+{
+  "Page_no": "5",
+  "Section": "QUANTUM THEORIES, PERCEPTION AND BRAIN",
+  "content": "Principal quantum number (n): Quantization of energy where n = 1, 2, 3, ...."
+},
+{
+  "Page_no": "5",
+  "Section": "QUANTUM THEORIES, PERCEPTION AND BRAIN",
+  "content": "Orbital quantum number (ℓ): Quantization of angular momentum magnitude where ℓ = 0, 1, 2, 3, ..., (n−1)."
+},
+{
+  "Page_no": "5",
+  "Section": "QUANTUM THEORIES, PERCEPTION AND BRAIN",
+  "content": "Magnetic quantum number (m): Quantization of angular momentum direction where m = 0, ±1, ±2, ±3, ..., ±ℓ."
+},
+{
+  "Page_no": "5",
+  "Section": "QUANTUM THEORIES, PERCEPTION AND BRAIN",
+  "content": "A wave function with respect to quantum numbers that represents the state of the object can be represented as Ψ (n, ℓ, m)."
+},
+{
+  "Page_no": "5",
+  "Section": "QUANTUM THEORIES, PERCEPTION AND BRAIN",
+  "content": "For example, for energy level n = 3, the possible values of ℓ are 0, 1, 2, and the possible values for m are 0, ±1, ±2."
+},
+{
+  "Page_no": "5",
+  "Section": "QUANTUM THEORIES, PERCEPTION AND BRAIN",
+  "content": "Here, ℓ is momentum magnitude, which is simply the amount of motion of the object."
+},
+{
+  "Page_no": "5",
+  "Section": "QUANTUM THEORIES, PERCEPTION AND BRAIN",
+  "content": "m is momentum direction, which describes both the amount and direction of motion."
+},
+{
+  "Page_no": "5",
+  "Section": "THE PROPOSED QUANTUM VISION (QV) THEORY TO GENERATE INFORMATION WAVES OF OBJECTS",
+  "content": "In this section, we explain how to create wave functions for object images using quantum theories and numbers."
+},
+{
+  "Page_no": "5",
+  "Section": "THE PROPOSED QUANTUM VISION (QV) THEORY TO GENERATE INFORMATION WAVES OF OBJECTS",
+  "content": "As described in the section above, when principal quantum number n = 3 (Energy level), then ℓ = 0,1,2 (amount of motion) and m = 0,±1,±2 (amount and direction of motion)."
+},
+{
+  "Page_no": "5",
+  "Section": "THE PROPOSED QUANTUM VISION (QV) THEORY TO GENERATE INFORMATION WAVES OF OBJECTS",
+  "content": "Since an image is a function of two space variables I (x,y), we can use the variable m in both space directions to create basis wave functions for an object in the given image."
+},
+{
+  "Page_no": "5",
+  "Section": "THE PROPOSED QUANTUM VISION (QV) THEORY TO GENERATE INFORMATION WAVES OF OBJECTS",
+  "content": "Such as for the x− direction, Ψx,m(x, y) = I(x − m, y) − I(x, y) that creates four basis wave functions for m = 0, ±1, ±2."
+},
+{
+  "Page_no": "5",
+  "Section": "THE PROPOSED QUANTUM VISION (QV) THEORY TO GENERATE INFORMATION WAVES OF OBJECTS",
+  "content": "For m = 0, we do not create any wave function; this is why there will be four basis wave functions as given in Equation (1)."
+},
+{
+  "Page_no": "5",
+  "Section": "THE PROPOSED QUANTUM VISION (QV) THEORY TO GENERATE INFORMATION WAVES OF OBJECTS",
+  "content": "For m = 0, there is no shifting of the image, I(x, y) equals to itself and the result of the subtraction is 0."
+},
+{
+  "Page_no": "5",
+  "Section": "THE PROPOSED QUANTUM VISION (QV) THEORY TO GENERATE INFORMATION WAVES OF OBJECTS",
+  "content": "According to our model, we shift the original object image with respect to m = ±1, ±2 in x−direction, and then the original still image is subtracted from the shifted image."
+},
+{
+  "Page_no": "5",
+  "Section": "THE PROPOSED QUANTUM VISION (QV) THEORY TO GENERATE INFORMATION WAVES OF OBJECTS",
+  "content": "Equation (1): Ψx,−1(x, y) = I(x + 1, y) − I(x, y); Ψx,+1(x, y) = I(x − 1, y) − I(x, y); Ψx,−2(x, y) = I(x + 2, y) − I(x, y); Ψx,+2(x, y) = I(x − 2, y) − I(x, y)"
+},
+
+{
+  "Page_no": "5",
+  "Section": "THE PROPOSED QUANTUM VISION (QV) THEORY TO GENERATE INFORMATION WAVES OF OBJECTS",
+  "content": "And for the y−direction, Ψy,m(x, y) = I(x, y − m) − I(x, y) that creates four basis wave functions for m = ±1, ±2."
+},
+{
+  "Page_no": "5",
+  "Section": "THE PROPOSED QUANTUM VISION (QV) THEORY TO GENERATE INFORMATION WAVES OF OBJECTS",
+  "content": "Equation (2): Ψy,−1(x, y) = I(x, y + 1) − I(x, y); Ψy,+1(x, y) = I(x, y − 1) − I(x, y); Ψy,−2(x, y) = I(x, y + 2) − I(x, y); Ψy,+2(x, y) = I(x, y − 2) − I(x, y)"
+},
+
+{
+  "Page_no": "5",
+  "Section": "THE PROPOSED QUANTUM VISION (QV) THEORY TO GENERATE INFORMATION WAVES OF OBJECTS",
+  "content": "In total, eight basis wave functions are created for m = ±1,±2."
+},
+{
+  "Page_no": "5",
+  "Section": "THE PROPOSED QUANTUM VISION (QV) THEORY TO GENERATE INFORMATION WAVES OF OBJECTS",
+  "content": "We choose the subtraction operations above to create basis wave functions of objects because of the following reason:"
+},
+{
+  "Page_no": "5",
+  "Section": "THE PROPOSED QUANTUM VISION (QV) THEORY TO GENERATE INFORMATION WAVES OF OBJECTS",
+  "content": "According to Schrödinger’s wave equation and quantum physics, Ψ conveys rich information about the object but itself has no physical interpretation."
+},
+{
+  "Page_no": "5",
+  "Section": "THE PROPOSED QUANTUM VISION (QV) THEORY TO GENERATE INFORMATION WAVES OF OBJECTS",
+  "content": "The square of its absolute magnitude |Ψ|² evaluated at a particular place at a particular time is proportional to the probability of finding the object body there at that time."
+},
+{
+  "Page_no": "5",
+  "Section": "THE PROPOSED QUANTUM VISION (QV) THEORY TO GENERATE INFORMATION WAVES OF OBJECTS",
+  "content": "If we subtract the original image from the shifted version, as shown in Equations (1) and (2), we obtain the basis wave functions of the object."
+},
+{
+  "Page_no": "5",
+  "Section": "THE PROPOSED QUANTUM VISION (QV) THEORY TO GENERATE INFORMATION WAVES OF OBJECTS",
+  "content": "Taking the square of their magnitude reveals the position information of the object."
+},
+{
+  "Page_no": "6",
+  "Section": "THE PROPOSED QUANTUM VISION (QV) THEORY TO GENERATE INFORMATION WAVES OF OBJECTS",
+  "content": "Because it will highlight the boundary and exterior region positions of the object."
+},
+{
+  "Page_no": "6",
+  "Section": "THE PROPOSED QUANTUM VISION (QV) THEORY TO GENERATE INFORMATION WAVES OF OBJECTS",
+  "content": "According to Quantum wave mechanics, superposition of these basis wave functions, calculated in Equations (1) and (2), is also a wave function that describes object characteristics."
+},
+{
+  "Page_no": "6",
+  "Section": "THE PROPOSED QUANTUM VISION (QV) THEORY TO GENERATE INFORMATION WAVES OF OBJECTS",
+  "content": "Thus, we can linearly combine these wave functions (3) to produce other wave functions which can be more informative."
+},
+{
+  "Page_no": "6",
+  "Section": "THE PROPOSED QUANTUM VISION (QV) THEORY TO GENERATE INFORMATION WAVES OF OBJECTS",
+  "content": "Ψ = Σ_{m=-2}^{2} [a_m Ψ_{x,m}(x,y) + b_m Ψ_{y,m}(x,y)]  (3) where a_m and b_m are constant scalars, and m = ±1, ±2."
+},
+{
+  "Page_no": "6",
+  "Section": "THE PROPOSED QUANTUM VISION (QV) THEORY TO GENERATE INFORMATION WAVES OF OBJECTS",
+  "content": "Here, we have a linear combination of 8 basis wave functions."
+},
+{
+  "Page_no": "6",
+  "Section": "THE PROPOSED QUANTUM VISION (QV) THEORY TO GENERATE INFORMATION WAVES OF OBJECTS",
+  "content": "Instead of multiplying the basis functions with the constants, we can perform more sophisticated operations to create more informative wave functions after additions."
+},
+
+{
+  "Page_no": "6",
+  "Section": "THE PROPOSED QUANTUM VISION (QV) THEORY TO GENERATE INFORMATION WAVES OF OBJECTS",
+  "content": "However, this combination of basis wave functions will be a non-linear combination of basis wave functions."
+},
+{
+  "Page_no": "6",
+  "Section": "THE PROPOSED QUANTUM VISION (QV) THEORY TO GENERATE INFORMATION WAVES OF OBJECTS",
+  "content": "The proposed non-linear combination of basis wave function is shown below: Ψ = Σ_{m=-2}^{2} [ReLU(H_m * Ψ_{x,m}(x,y)) + ReLU(V_m * Ψ_{y,m}(x,y))]  (4)."
+},
+{
+  "Page_no": "6",
+  "Section": "THE PROPOSED QUANTUM VISION (QV) THEORY TO GENERATE INFORMATION WAVES OF OBJECTS",
+  "content": "Here, * is a convolution operation, and H_m and V_m are convolution kernels for m = ±1, ±2."
+},
+
+{
+  "Page_no": "6",
+  "Section": "THE PROPOSED QUANTUM VISION (QV) THEORY TO GENERATE INFORMATION WAVES OF OBJECTS",
+  "content": "The convolution operation itself is a linear operator. However, ReLU is the linear rectifier unit that achieves the non-linear combination of basis functions"
+},
+{
+  "Page_no": "6",
+  "Section": "THE PROPOSED QUANTUM VISION (QV) THEORY TO GENERATE INFORMATION WAVES OF OBJECTS",
+  "content": "Here, we start to build a CNN."
+},
+{
+  "Page_no": "6",
+  "Section": "THE PROPOSED QUANTUM VISION (QV) THEORY TO GENERATE INFORMATION WAVES OF OBJECTS",
+  "content": "It will find the best non-linear combination of basis wave functions to create informative wave functions describing object characteristics."
+},
+
+{
+  "Page_no": "6",
+  "Section": "THE PROPOSED QUANTUM VISION (QV) THEORY TO GENERATE INFORMATION WAVES OF OBJECTS",
+  "content": "We can also use a colour (RGB) image as an original input image I(x,y,C), where C = [R,G,B], that generates basis wave functions as Ψx,m(x,y,C) and Ψy,m(x,y,C)."
+},
+{
+  "Page_no": "6",
+  "Section": "THE PROPOSED QUANTUM VISION (QV) THEORY TO GENERATE INFORMATION WAVES OF OBJECTS",
+  "content": "Also, instead of using a single convolutional kernel in a convolutional layer of a CNN, we can use more than one kernel such as 128 kernels."
+},
+{
+  "Page_no": "6",
+  "Section": "THE PROPOSED QUANTUM VISION (QV) THEORY TO GENERATE INFORMATION WAVES OF OBJECTS",
+  "content": "So after the non-linear combination of these 8 basis functions,"
+},
+{
+  "Page_no": "6",
+  "Section": "THE PROPOSED QUANTUM VISION (QV) THEORY TO GENERATE INFORMATION WAVES OF OBJECTS",
+  "content": "it will result in 128 different wave functions of an object that is illustrated with the equation below.\n\nΨ₁₂₈ = ∑(m=-2 to 2) [ReLU(Hm,128 * Ψy,m(x, y, C)) + ReLU(Vm,128 * Ψy,m(x, y, C))]   (5)\n\nwhere Hm,128 and Vm,128 indicate that the convolutional layer has 128 kernels (filters) for m = ±1, ±2, and Ψ₁₂₈ means 128 wave functions are generated for the given object image."
+},
+{
+  "Page_no": "6",
+  "Section": "THE PROPOSED QUANTUM VISION (QV) THEORY TO GENERATE INFORMATION WAVES OF OBJECTS",
+  "content": "In addition, we can also apply more than one convolutional layer to each basis wave functions with ReLU operations and then sum up (combine) to produce object information waves. For example, with the three convolutional layers the formulation is given below:\n\nΨ₁₂₈ = ∑(m=-2 to 2) (ReLU(H3,m,128 * (ReLU(H2,m,128 * (ReLU(H1,m,128 * Ψy,m(x, y, C)))))) + ReLU(V3,m,128 * (ReLU(V2,m,128 * (ReLU(V1,m,128 * Ψy,m(x, y, C)))))))   (6)"
+},
+{
+  "Page_no": "6",
+  "Section": "THE PROPOSED QUANTUM VISION (QV) THEORY TO GENERATE INFORMATION WAVES OF OBJECTS",
+  "content": "it will result in 128 different wave functions of an object that is illustrated with the equation below."
+},
+{
+  "Page_no": "6",
+  "Section": "THE PROPOSED QUANTUM VISION (QV) THEORY TO GENERATE INFORMATION WAVES OF OBJECTS",
+  "content": "Ψ₁₂₈ = ∑(m=-2 to 2) [ReLU(Hm,128 * Ψy,m(x, y, C)) + ReLU(Vm,128 * Ψy,m(x, y, C))]   (5)"
+},
+{
+  "Page_no": "6",
+  "Section": "THE PROPOSED QUANTUM VISION (QV) THEORY TO GENERATE INFORMATION WAVES OF OBJECTS",
+  "content": "where Hm,128 and Vm,128 indicate that the convolutional layer has 128 kernels (filters) for m = ±1, ±2, and Ψ₁₂₈ means 128 wave functions are generated for the given object image."
+},
+{
+  "Page_no": "6",
+  "Section": "THE PROPOSED QUANTUM VISION (QV) THEORY TO GENERATE INFORMATION WAVES OF OBJECTS",
+  "content": "In addition, we can also apply more than one convolutional layer to each basis wave functions with ReLU operations and then sum up (combine) to produce object information waves."
+},
+{
+  "Page_no": "6",
+  "Section": "THE PROPOSED QUANTUM VISION (QV) THEORY TO GENERATE INFORMATION WAVES OF OBJECTS",
+  "content": "For example, with the three convolutional layers the formulation is given below:"
+},
+{
+  "Page_no": "6",
+  "Section": "THE PROPOSED QUANTUM VISION (QV) THEORY TO GENERATE INFORMATION WAVES OF OBJECTS",
+  "content": "Ψ₁₂₈ = ∑(m=-2 to 2) (ReLU(H3,m,128 * (ReLU(H2,m,128 * (ReLU(H1,m,128 * Ψy,m(x, y, C)))))) + ReLU(V3,m,128 * (ReLU(V2,m,128 * (ReLU(V1,m,128 * Ψy,m(x, y, C)))))))   (6)"
+},
+{
+  "Page_no": "6",
+  "Section": "THE PROPOSED QUANTUM VISION (QV) THEORY TO GENERATE INFORMATION WAVES OF OBJECTS",
+  "content": "Here, Ψ₁₂₈ means 128 wave functions are generated."
+},
+{
+  "Page_no": "6",
+  "Section": "THE PROPOSED QUANTUM VISION (QV) THEORY TO GENERATE INFORMATION WAVES OF OBJECTS",
+  "content": "These wave functions are generated for the given object image."
+},
+{
+  "Page_no": "6",
+  "Section": "THE PROPOSED QUANTUM VISION (QV) THEORY TO GENERATE INFORMATION WAVES OF OBJECTS",
+  "content": "H1,m,128, H2,m,128 and H3,m,128 are the first, second and third convolutional layers with 128 filters conducted on Ψ for m = ±1,±2."
+},
+{
+  "Page_no": "6",
+  "Section": "THE PROPOSED QUANTUM VISION (QV) THEORY TO GENERATE INFORMATION WAVES OF OBJECTS",
+  "content": "V1,m,128, V2,m,128 and V3,m,128 are the first, second and third convolutional layers with 128 filters conducted on Ψ y,m for m = ±1,±2."
+},
+{
+  "Page_no": "6",
+  "Section": "THE PROPOSED QUANTUM VISION (QV) THEORY TO GENERATE INFORMATION WAVES OF OBJECTS",
+  "content": "The number of convolutional layers can be increased."
+},
+{
+  "Page_no": "6",
+  "Section": "THE PROPOSED QUANTUM VISION (QV) THEORY TO GENERATE INFORMATION WAVES OF OBJECTS",
+  "content": "In our evaluations, the optimal number of convolutional layers is 3."
+},
+{
+  "Page_no": "6",
+  "Section": "THE PROPOSED QUANTUM VISION (QV) THEORY TO GENERATE INFORMATION WAVES OF OBJECTS",
+  "content": "Details of the proposed QV theory algorithm is also given in Algorithm 1."
+},
+{
+  "Page_no": "6",
+  "Section": "Algorithm 1: Algorithm of QV Theory to Generate Information Waves of Objects From 2D Image Inputs",
+  "content": "For Color Images (3D images), Replace I(x,y) with I(x,y,C), Where C = [R,G,B] That Generates Basis Wave Functions as Ψx,m(x,y,C) and Ψy,m(x,y,C)."
+},
+{
+  "Page_no": "6",
+  "Section": "Algorithm 1: Algorithm of QV Theory to Generate Information Waves of Objects From 2D Image Inputs",
+  "content": "Input: Original Image I(x,y)"
+},
+{
+  "Page_no": "6",
+  "Section": "Algorithm 1: Algorithm of QV Theory to Generate Information Waves of Objects From 2D Image Inputs",
+  "content": "Output: 128 information wave function, Ψ128"
+},
+{
+  "Page_no": "6",
+  "Section": "Algorithm 1: Algorithm of QV Theory to Generate Information Waves of Objects From 2D Image Inputs",
+  "content": "Process:"
+},
+{
+  "Page_no": "6",
+  "Section": "Algorithm 1: Algorithm of QV Theory to Generate Information Waves of Objects From 2D Image Inputs",
+  "content": "1. Load the image I(x,y)"
+},
+{
+  "Page_no": "6",
+  "Section": "Algorithm 1: Algorithm of QV Theory to Generate Information Waves of Objects From 2D Image Inputs",
+  "content": "2. Resize the image to 64 × 64"
+},
+{
+  "Page_no": "6",
+  "Section": "Algorithm 1: Algorithm of QV Theory to Generate Information Waves of Objects From 2D Image Inputs",
+  "content": "3. Normalize pixel values to the range [0,1] by dividing each value by 255; I(x,y)=I(x,y)/255"
+},
+{
+  "Page_no": "6",
+  "Section": "Algorithm 1: Algorithm of QV Theory to Generate Information Waves of Objects From 2D Image Inputs",
+  "content": "4. Feed the normalized image I(x,y) to the QV block"
+},
+{
+  "Page_no": "6",
+  "Section": "Algorithm 1: Algorithm of QV Theory to Generate Information Waves of Objects From 2D Image Inputs",
+  "content": "5. For m = ±1, ±2 (m is the quantum number for amount and direction of motion) → create 8 basis wave functions (Ψ)"
+},
+{
+  "Page_no": "6",
+  "Section": "Algorithm 1: Algorithm of QV Theory to Generate Information Waves of Objects From 2D Image Inputs",
+  "content": "6. For m = ±1, ±2, create wave 4 basis wave functions (Ψ) by shifting pixels 1 or 2 in x direction and subtract from the input image I(x,y) (Equation 1)"
+},
+{
+  "Page_no": "6",
+  "Section": "Algorithm 1: Algorithm of QV Theory to Generate Information Waves of Objects From 2D Image Inputs",
+  "content": "7. For m = ±1, ±2, create wave 4 basis wave functions (Ψ) by shifting pixels 1 or 2 in y direction and subtract from the input image I(x,y) (Equation 2)"
+},
+{
+  "Page_no": "6",
+  "Section": "Algorithm 1: Algorithm of QV Theory to Generate Information Waves of Objects From 2D Image Inputs",
+  "content": "8. Then, perform non-linear combinations of these 8 basis functions using a convolution operation with ReLU activation to produce other basis wave functions (Equation 4)."
+},
+{
+  "Page_no": "6",
+  "Section": "Algorithm 1: Algorithm of QV Theory to Generate Information Waves of Objects From 2D Image Inputs",
+  "content": "Here, ReLU achieves the non-linear combination of basis functions. Instead of applying one convolution kernel, we use 128 convolution kernels, resulting in 128 basis wave functions (Ψ128)."
+},
+{
+  "Page_no": "6",
+  "Section": "Algorithm 1: Algorithm of QV Theory to Generate Information Waves of Objects From 2D Image Inputs",
+  "content": "9. Apply three convolutional layers to each basis wave function with ReLU operations and then sum up (combine) to produce the final 128 information wave function (Ψ128) that is input to DNN."
+},
+{
+  "Page_no": "6",
+  "Section": "THE PROPOSED QUANTUM VISION (QV) THEORY TO GENERATE INFORMATION WAVES OF OBJECTS",
+  "content": "B. IMPLEMENTATION OF QV BLOCK"
+},
+{
+  "Page_no": "6",
+  "Section": "THE PROPOSED QUANTUM VISION (QV) THEORY TO GENERATE INFORMATION WAVES OF OBJECTS",
+  "content": "In the proposed work, instead of feeding still images into deep learning models for object recognition, waves of objects can be fed according to the QV theory."
+},
+{
+  "Page_no": "6",
+  "Section": "THE PROPOSED QUANTUM VISION (QV) THEORY TO GENERATE INFORMATION WAVES OF OBJECTS",
+  "content": "To form the information waves of objects, QV block is designed that takes a still image of an object."
+},
+{
+  "Page_no": "6",
+  "Section": "THE PROPOSED QUANTUM VISION (QV) THEORY TO GENERATE INFORMATION WAVES OF OBJECTS",
+  "content": "Then, inside the QV block, the still image is converted to wave feature maps as shown in figures/Fig1.jpg."
+},
+
+{
+  "Page_no": "6",
+  "Section": "THE PROPOSED QUANTUM VISION (QV) THEORY TO GENERATE INFORMATION WAVES OF OBJECTS",
+  "content": "For m = ±1, ±2, there are 8 basis wave functions generated using Equations (1) and (2)."
+},
+{
+  "Page_no": "6",
+  "Section": "THE PROPOSED QUANTUM VISION (QV) THEORY TO GENERATE INFORMATION WAVES OF OBJECTS",
+  "content": "To implement Equations (1) and (2) inside the QV block, shift-subtract convolutional layers are designed."
+},
+{
+  "Page_no": "7",
+  "Section": "THE PROPOSED QUANTUM VISION (QV) THEORY TO GENERATE INFORMATION WAVES OF OBJECTS",
+  "content": "For the given input image, these shift-subtract convolutional kernels use fixed filter weights to shift the image to 1 pixel and 2 pixels left, right, up and down."
+},
+{
+  "Page_no": "7",
+  "Section": "THE PROPOSED QUANTUM VISION (QV) THEORY TO GENERATE INFORMATION WAVES OF OBJECTS",
+  "content": "Then, inside the convolutional layer, the original image is subtracted from the shifted image to find the difference according to Equations (1) and (2) that forms the basis of the information wave equation."
+},
+{
+  "Page_no": "7",
+  "Section": "THE PROPOSED QUANTUM VISION (QV) THEORY TO GENERATE INFORMATION WAVES OF OBJECTS",
+  "content": "Shift-subtract convolutional kernels with respect to 1 pixel and 2 pixels left, right, up and down are shown in Fig. 2."
+},
+{
+  "Page_no": "7",
+  "Section": "THE PROPOSED QUANTUM VISION (QV) THEORY TO GENERATE INFORMATION WAVES OF OBJECTS",
+  "content": "Inside the shift-subtract convolutional kernels, weight learning is frozen."
+},
+{
+  "Page_no": "7",
+  "Section": "THE PROPOSED QUANTUM VISION (QV) THEORY TO GENERATE INFORMATION WAVES OF OBJECTS",
+  "content": "In other words, no feature learning is performed."
+},
+{
+  "Page_no": "7",
+  "Section": "THE PROPOSED QUANTUM VISION (QV) THEORY TO GENERATE INFORMATION WAVES OF OBJECTS",
+  "content": "After obtaining the basis wave functions using the shift-subtract convolutional filters, three consecutive convolutional layers are applied to each basis wave function as described in Equation (6)."
+},
+{
+  "Page_no": "7",
+  "Section": "THE PROPOSED QUANTUM VISION (QV) THEORY TO GENERATE INFORMATION WAVES OF OBJECTS",
+  "content": "Each convolutional layer has 128 filters (channels) with the size of 3×3, and then ReLU activation function is applied."
+},
+{
+  "Page_no": "7",
+  "Section": "THE PROPOSED QUANTUM VISION (QV) THEORY TO GENERATE INFORMATION WAVES OF OBJECTS",
+  "content": "In total 128 features maps are extracted at the end of each branch."
+},
+{
+  "Page_no": "7",
+  "Section": "THE PROPOSED QUANTUM VISION (QV) THEORY TO GENERATE INFORMATION WAVES OF OBJECTS",
+  "content": "There are 8 branches (for m = ±1, ±2), and finally, 128 feature maps of each branch is added together to form a non-linear combination of information wave functions according to (6)."
+},
+{
+  "Page_no": "7",
+  "Section": "THE PROPOSED QUANTUM VISION (QV) THEORY TO GENERATE INFORMATION WAVES OF OBJECTS",
+  "content": "There are 128 information wave functions (wave feature maps) to represent each object."
+},
+{
+  "Page_no": "7",
+  "Section": "THE PROPOSED QUANTUM VISION (QV) THEORY TO GENERATE INFORMATION WAVES OF OBJECTS",
+  "content": "Rather than feeding color images to different deep learning architectures (i.e. CNNs, vision transformers or convolutional vision transformers), these information wave feature maps are fed."
+},
+{
+  "Page_no": "7",
+  "Section": "THE PROPOSED QUANTUM VISION (QV) THEORY TO GENERATE INFORMATION WAVES OF OBJECTS",
+  "content": "In designing the QV block, several alternatives are experimented such as number of convolutional layers in branches, the channel (filter) numbers, the optimum number of branches."
+},
+{
+  "Page_no": "7",
+  "Section": "THE PROPOSED QUANTUM VISION (QV) THEORY TO GENERATE INFORMATION WAVES OF OBJECTS",
+  "content": "In the ablation studies, you can find comparative analysis of these design choices."
+},
+{
+  "Page_no": "7",
+  "Section": "THE PROPOSED QUANTUM VISION (QV) THEORY TO GENERATE INFORMATION WAVES OF OBJECTS",
+  "content": "After feeding still images to the QV block, information waves of the object are obtained."
+},
+{
+  "Page_no": "7",
+  "Section": "THE PROPOSED QUANTUM VISION (QV) THEORY TO GENERATE INFORMATION WAVES OF OBJECTS",
+  "content": "In Fig. 3, sample information waves of a flower, a dog and a car image are shown."
+},
+{
+  "Page_no": "7",
+  "Section": "THE PROPOSED QUANTUM VISION (QV) THEORY TO GENERATE INFORMATION WAVES OF OBJECTS",
+  "content": "Each information wave captures different information about the object of interest."
+},
+{
+  "Page_no": "7",
+  "Section": "THE PROPOSED QUANTUM VISION (QV) THEORY TO GENERATE INFORMATION WAVES OF OBJECTS",
+  "content": "In our design, 128 information waves are extracted and then fed to the deep learning models rather than the still image."
+},
+{
+  "Page_no": "7",
+  "Section": "V. EXPERIMENTS",
+  "content": "In this section, we assess the performance of QV theory."
+},
+{
+  "Page_no": "7",
+  "Section": "V. EXPERIMENTS",
+  "content": "First the proposed QV block is integrated into different deep learning architectures; sequential CNNs, vision transformer and convolutional vision transformer."
+},
+
+{
+  "Page_no": "7",
+  "Section": "V. EXPERIMENTS",
+  "content": "Then, QV model variants are evaluated on several benchmark datasets for object recognition to demonstrate the performance with and without QV block."
+},
+{
+  "Page_no": "7",
+  "Section": "V. EXPERIMENTS",
+  "content": "Our results are then compared with other well-known deep learning models. Finally, ablation studies are conducted to validate the design choices of the proposed QV block."
+},
+{
+  "Page_no": "7",
+  "Section": "V. EXPERIMENTS",
+  "content": "A. SETUP 1) DATASETS Toexplore theeffectiveness of the proposed approach, we use CIFAR-10 in reference [30], CIFAR-100 in reference [30], Fashion-MNIST in reference [31] and Oxford Flowers 102 in reference [38]."
+},
+{
+  "Page_no": "7",
+  "Section": "V. EXPERIMENTS",
+  "content": "These benchmark datasets are used for object recognition."
+},
+
+{
+  "Page_no": "7",
+  "Section": "V. EXPERIMENTS",
+  "content": "CIFAR10/100 (color) and Fashion-MNIST (grayscale) datasets have low resolution images of size 32 × 32 and 28 × 28 respectively."
+},
+{
+  "Page_no": "7",
+  "Section": "V. EXPERIMENTS",
+  "content": "Additionally, these datasets have moderate number of training samples (50,000 for Cifar datasets and 60,000 for the Fashion Mnist)."
+},
+{
+  "Page_no": "7",
+  "Section": "V. EXPERIMENTS",
+  "content": "All these parameters make it difficult to extract good representative features from these datasets for object recognition."
+},
+{
+  "Page_no": "7",
+  "Section": "V. EXPERIMENTS",
+  "content": "In our design and experiments for different QV versions, as well as, for standalone compared models, the input image size on Cifar-10, Cifar-100 and Fashion Mnist datasets is 64 × 64."
+},
+{
+  "Page_no": "7",
+  "Section": "V. EXPERIMENTS",
+  "content": "Thus, CIFAR10/100 and Fashion-MNIST dataset images are rescaled to 64 × 64."
+},
+{
+  "Page_no": "7",
+  "Section": "V. EXPERIMENTS",
+  "content": "On the other hand, the Oxford Flowers 102 dataset consists of high-resolution flower images with varying dimensions, categorized into 102 classes."
+},
+{
+  "Page_no": "7",
+  "Section": "V. EXPERIMENTS",
+  "content": "Each class contains between 40 and 258 images, presenting a significant challenge for deep learning models trained from scratch."
+},
+{
+  "Page_no": "7",
+  "Section": "V. EXPERIMENTS",
+  "content": "The limited number of images per class and the large number of categories make it difficult for models to learn effectively without pre-training."
+},
+{
+  "Page_no": "7",
+  "Section": "V. EXPERIMENTS",
+  "content": "On Oxford Flowers 102 dataset, images are rescaled to 224 × 224."
+},
+{
+  "Page_no": "7",
+  "Section": "V. EXPERIMENTS",
+  "content": "Therefore, performances of QV and non-QV model variants are evaluated on both low- and high-resolution challenging datasets."
+},
+{
+  "Page_no": "7",
+  "Section": "V. EXPERIMENTS",
+  "content": "2) MODEL VARIANTS WITH AND WITHOUT QV BLOCK"
+},
+{
+  "Page_no": "7",
+  "Section": "V. EXPERIMENTS",
+  "content": "As it will be demonstrated in the ablation studies section, the best performance with QV block is obtained using 8 branches."
+},
+{
+  "Page_no": "7",
+  "Section": "V. EXPERIMENTS",
+  "content": "Each branch contains 3 convolutional layers, and the number of channels (filters) in each convolutional layer is 128."
+},
+{
+  "Page_no": "7",
+  "Section": "V. EXPERIMENTS",
+  "content": "The QV block is integrated into different deep learning architectures to form QV model variants as shown in Fig. 4."
+},
+{
+  "Page_no": "7",
+  "Section": "V. EXPERIMENTS",
+  "content": "Here, QV block output (128 wave feature map) is integrated into two sequential CNN versions."
+},
+{
+  "Page_no": "7",
+  "Section": "V. EXPERIMENTS",
+  "content": "(a) QV-CNN Heavy contains 6 sequential convolutional (conv) layers, each with batch normalization, max-pooling and ReLU activation function as shown on the top of Fig. 4."
+},
+{
+  "Page_no": "7",
+  "Section": "V. EXPERIMENTS",
+  "content": "In the last conv layer (6th conv layer), for low-resolution images of Cifar 10/100 and Fashion Mnist datasets, there is no pooling operation."
+},
+{
+  "Page_no": "7",
+  "Section": "V. EXPERIMENTS",
+  "content": "This is done in order to go deeper in the network as shown in Fig. 4(a)."
+},
+
+{
+  "Page_no": "7",
+  "Section": "V. EXPERIMENTS",
+  "content": "But for the Oxford Flowers 102 dataset, a pooling layer with a size of 2 × 2 is added between conv layer 5 and conv layer 6 due to high-resolution images."
+},
+{
+  "Page_no": "7",
+  "Section": "V. EXPERIMENTS",
+  "content": "(b) QV-CNN-Light (Fig. 4(b)) model architecture is similar to QV-CNN-Heavy except that it contains 5 conv layers."
+},
+{
+  "Page_no": "7",
+  "Section": "V. EXPERIMENTS",
+  "content": "For all datasets, we use the same QV-CNN-Light architecture."
+},
+{
+  "Page_no": "7",
+  "Section": "V. EXPERIMENTS",
+  "content": "Information wave feature maps are given as an input to these CNN models."
+},
+{
+  "Page_no": "7",
+  "Section": "V. EXPERIMENTS",
+  "content": "Similarly, QV block is integrated into the ViT in reference[16] and CCT in reference [21] by feeding 128 wave feature maps as input (Fig. 4(c) and 4(d))."
+},
+{
+  "Page_no": "7",
+  "Section": "V. EXPERIMENTS",
+  "content": "For low resolution images of Cifar 10/100 and Fashion Mnist datasets, we fed 128 wave feature maps using m = ±1, ±2, shifting pixels 1 and 2 in all directions."
+},
+{
+  "Page_no": "7",
+  "Section": "V. EXPERIMENTS",
+  "content": "For low resolution images, we employ ViT-8/8 in reference[16] which means that there are 8 transformer layers with 8 × 8 input patch size."
+},
+{
+  "Page_no": "7",
+  "Section": "V. EXPERIMENTS",
+  "content": "The MLP size is 2048, hidden layer dimension is 1024, and the number of heads is 4."
+},
+{
+  "Page_no": "7",
+  "Section": "V. EXPERIMENTS",
+  "content": "For high resolution images of Oxford Flowers 102, ViT without QV block uses ViT-16/8 that uses 16 × 16 patches that is commonly used by ViT models with 224 × 224 input size."
+},
+{
+  "Page_no": "7",
+  "Section": "V. EXPERIMENTS",
+  "content": "The MLP size is 3072, hidden layer dimension is 768, and the number of heads is 8."
+},
+{
+  "Page_no": "7",
+  "Section": "V. EXPERIMENTS",
+  "content": "In addition, for the QV variant on Oxford Flowers 102, we fed 128 wave feature maps using m = ±2, ±4, shifting pixels 2 and 4 in all directions to reflect the higher image sizes."
+},
+{
+  "Page_no": "7",
+  "Section": "V. EXPERIMENTS",
+  "content": "When QV block is integrated to ViT, for high resolution image inputs such as 224 × 224, we may need max-pooling operation after the conv layers in QV block to decrease the computation complexity and memory usage."
+},
+{
+  "Page_no": "7",
+  "Section": "V. EXPERIMENTS",
+  "content": "In this way, learning with QV-ViT is faster and more effective."
+},
+{
+  "Page_no": "7",
+  "Section": "V. EXPERIMENTS",
+  "content": "In our experiments, only for Oxford Flowers 102 dataset, we use max-pooling after the first and second conv layers in the QV block."
+},
+{
+  "Page_no": "7",
+  "Section": "V. EXPERIMENTS",
+  "content": "Then, resulting 56 × 56 information wave feature maps are input to ViT-8/4 with 4 transformer layers with 8 × 8 input patch size."
+},
+{
+  "Page_no": "7",
+  "Section": "V. EXPERIMENTS",
+  "content": "For all datasets, ViT batch size is 64."
+},
+{
+  "Page_no": "7",
+  "Section": "V. EXPERIMENTS",
+  "content": "For CCT in reference [21], on Cifar 10/100 and Fashion Mnist (low-resolution images), we fed 128 wave feature maps using m = ±1, ±2."
+},
+{
+  "Page_no": "7",
+  "Section": "V. EXPERIMENTS",
+  "content": "On Oxford Flowers 102 (high-resolution), we fed 128 wave feature maps using m = ±2, ±4."
+},
+{
+  "Page_no": "7",
+  "Section": "V. EXPERIMENTS",
+  "content": "On all datasets, we use CCT-7/3×2 which means the model has 7 transformer layers, 2-layer convolutional tokenizer with 3×3 kernel size."
+},
+{
+  "Page_no": "7",
+  "Section": "V. EXPERIMENTS",
+  "content": "Each convolutional layer has 128 channels."
+},
+{
+  "Page_no": "7",
+  "Section": "V. EXPERIMENTS",
+  "content": "The number of heads is 2 and the batch size is 64."
+},
+{
+  "Page_no": "7",
+  "Section": "V. EXPERIMENTS",
+  "content": "Only for Oxford Flowers 102 dataset, we use max-pooling after the first and second conv layers in the QV block as explained above."
+},
+{
+  "Page_no": "7",
+  "Section": "V. EXPERIMENTS",
+  "content": "In QV model variants, images are converted to object information waves by using QV block first, then processed by different deep learning architectures for object recognition."
+},
+{
+  "Page_no": "7",
+  "Section": "V. EXPERIMENTS",
+  "content": "Whereas, models without QV blocks simply take color or gray images as input."
+},
+{
+  "Page_no": "7",
+  "Section": "V. EXPERIMENTS",
+  "content": "In the experiments, we compare the Top-1 accuracies with and without QV block."
+},
+{
+  "Page_no": "7",
+  "Section": "V. EXPERIMENTS",
+  "content": "Please note that in all experiments there is no pre-training; all models are trained from scratch for each dataset."
+},
+{
+  "Page_no": "7",
+  "Section": "V. EXPERIMENTS",
+  "content": "In all experiments on different datasets (Table 1), the same hyperparameters and data augmentation techniques are used in order to assess models fairly with and without QV block."
+},
+{
+  "Page_no": "7",
+  "Section": "V. EXPERIMENTS",
+  "content": "All models (including QV variants) are implemented in Python Tensorflow Keras (Python 3) in Google Colab Pro+ environment with NVIDIA V100 GPU."
+},
+{
+  "Page_no": "7",
+  "Section": "V. EXPERIMENTS",
+  "content": "For Cifar-10/100 data augmentation, random horizontal flip is applied."
+},
+{
+  "Page_no": "7",
+  "Section": "V. EXPERIMENTS",
+  "content": "Rotation range is 15 degrees."
+},
+{
+  "Page_no": "7",
+  "Section": "V. EXPERIMENTS",
+  "content": "During the data augmentation process, the images may be randomly rotated by any angle within the range of −15 degrees to +15 degrees."
+},
+
+{
+  "Page_no": "9",
+  "Section": "V. EXPERIMENTS",
+  "content": "The width shift range is 0.1, which means the images can be horizontally shifted by up to 10% of the total width in either direction."
+},
+{
+  "Page_no": "9",
+  "Section": "V. EXPERIMENTS",
+  "content": "Similarly, the height shift range is 0.1, which means the images can be vertically shifted by up to 10% of the total height in either direction."
+},
+{
+  "Page_no": "9",
+  "Section": "V. EXPERIMENTS",
+  "content": "For Fashion Mnist data augmentation, the rotation range is 11 degrees, the width and height shift range is 0.05. The random brightness is also adjusted with multiplying the original intensity within rage [0.9, 1.1]."
+},
+{
+  "Page_no": "9",
+  "Section": "V. EXPERIMENTS",
+  "content": "For Oxford Flowers 102 data augmentation, random horizontal flip, rotation range is 15, the width and height shift range is 0.1 and zoom is 0.1."
+},
+{
+  "Page_no": "9",
+  "Section": "V. EXPERIMENTS",
+  "content": "For CNN model variants (with and without QV), the random brightness is also adjusted with multiplyingtheoriginalintensity withinrage[0.9,1.1]."
+},
+{
+  "Page_no": "9",
+  "Section": "V. EXPERIMENTS",
+  "content": "Wedo not use random brightness for ViT and CCT model variants with and without QV due to the observed performance degrade with brightness in the Oxford Flowers 102 dataset."
+},
+{
+  "Page_no": "9",
+  "Section": "V. EXPERIMENTS",
+  "content": "For CCT and its QV variants, AdamW optimizer that combines the Adam optimizer with weight decay."
+},
+{
+  "Page_no": "9",
+  "Section": "V. EXPERIMENTS",
+  "content": "The batch size is 64 for all datasets, and in total of 360 epochs are used for training."
+},
+{
+  "Page_no": "9",
+  "Section": "V. EXPERIMENTS",
+  "content": "For CCT, the learning rate starts with 0.001 and weight decay value is 0.0001."
+},
+{
+  "Page_no": "9",
+  "Section": "V. EXPERIMENTS",
+  "content": "For CNN, ViT, and their QV variants, Adam optimizer with 64 batch size, and in total of 360 epochs are used for training."
+},
+{
+  "Page_no": "9",
+  "Section": "V. EXPERIMENTS",
+  "content": "During training, step decay learning rate scheduler is used with Adam optimizer."
+},
+{
+  "Page_no": "9",
+  "Section": "V. EXPERIMENTS",
+  "content": "Since different deep learning architectures worked well with various learning scheduling, we use the best scheduling mechanisms for CNN, ViT, and their QV variants."
+},
+{
+  "Page_no": "9",
+  "Section": "V. EXPERIMENTS",
+  "content": "For CNN models, initial learning rate (lr) is 0.01 and scheduling is as follows: epoch>80 → lr=0.005, epoch>140 → lr=0.001, epoch>200 → lr=0.0005, epoch>260→lr=0.0001."
+},
+{
+  "Page_no": "9",
+  "Section": "V. EXPERIMENTS",
+  "content": "For ViT models, initial learning rate (lr) is 0.001 and scheduling is as follows: epoch>80 → lr=0.0005, epoch>140 → lr=0.0001, epoch>200 → lr=0.00005, epoch>260 → lr=0.00001, epoch>320 → lr=0.000005."
+},
+{
+  "Page_no": "9",
+  "Section": "V. EXPERIMENTS",
+  "content": "Note that in the paper of CCT in reference[21], authors provide higher accuracies than those the listed in this paper due to longer number of training epochs (1000 epochs) and various data augmentation techniques (such as CutMix, Mixup)."
+},
+{
+  "Page_no": "9",
+  "Section": "V. EXPERIMENTS",
+  "content": "In these experiments, we implemented CNN, ViT and CCTcodesand train the models under the same conditions with and without QVblockfromthescratch to analyze the impact of QV block on different deep learning models."
+},
+{
+  "Page_no": "9",
+  "Section": "V. EXPERIMENTS",
+  "content": "B. RESULTS WITH AND WITHOUT QV BLOCK WITH THE SAME EVALUATION SETUP"
+},
+{
+  "Page_no": "9",
+  "Section": "V. EXPERIMENTS",
+  "content": "Results in Table 1 compare top-1 accuracies of different deep learning models with and without QV block."
+},
+{
+  "Page_no": "9",
+  "Section": "V. EXPERIMENTS",
+  "content": "In particular, different model variants are trained without QV block and with QV block using information wave feature maps of input images."
+},
+{
+  "Page_no": "9",
+  "Section": "V. EXPERIMENTS",
+  "content": "In the experiments, the same evaluation setup is utilized as we explained above."
+},
+{
+  "Page_no": "9",
+  "Section": "V. EXPERIMENTS",
+  "content": "Results demonstrate that all models with QV block improve their top-1 accuracies compared to their standalone versions."
+},
+{
+  "Page_no": "9",
+  "Section": "V. EXPERIMENTS",
+  "content": "In particular, 132202 QV-CNN-Heavy model achieve the best performances on CIFAR-10, CIFAR-100 and Oxford Flowers 102 datasets."
+},
+{
+  "Page_no": "9",
+  "Section": "V. EXPERIMENTS",
+  "content": "The top-1 accuracies are 94.35%, 71.17% and 62% without any pre-training."
+},
+{
+  "Page_no": "9",
+  "Section": "V. EXPERIMENTS",
+  "content": "In particular, QV-CNN-Heavy improve the top-1 accuracyofCNN-Heavymodel 2.2% on CIFAR-10, 4.19% on CIFAR-100 and 5.2% on Oxford Flowers 102."
+},
+{
+  "Page_no": "9",
+  "Section": "V. EXPERIMENTS",
+  "content": "These results illustrate that QV block has a significant impact on object classification using both low- and high-resolution images."
+},
+{
+  "Page_no": "9",
+  "Section": "V. EXPERIMENTS",
+  "content": "For the Fashion Mnist dataset, performance of QV-CNN-Heavy (94.94%) is also improved from the standalone version (94.45%)."
+},
+{
+  "Page_no": "9",
+  "Section": "V. EXPERIMENTS",
+  "content": "Similarly, with the lightweight CNN model, QV-CNN-Light perform better than CNN-Light on all datasets."
+},
+{
+  "Page_no": "9",
+  "Section": "V. EXPERIMENTS",
+  "content": "On CIFAR10/100 improvement is around 2%, on Fashion-Mnist improvement is around 0.5% and on Oxford Flowers 102 improvement is 10.77% with QV block."
+},
+{
+  "Page_no": "9",
+  "Section": "V. EXPERIMENTS",
+  "content": "Results are consistent with and without QV block on all CNN models; QV block increases the accuracies compared to CNN models that use still images."
+},
+{
+  "Page_no": "9",
+  "Section": "V. EXPERIMENTS",
+  "content": "When QV block is integrated into ViT, top-1 accuracies improve significantly; 85.78% to 91.00% on CIFAR-10, 59.02% to 67.99% on CIFAR-100 and 93.28% to 95.2% on Fashion-Mnist."
+},
+{
+  "Page_no": "9",
+  "Section": "V. EXPERIMENTS",
+  "content": "ViT model generally do not perform well without pre-training."
+},
+{
+  "Page_no": "9",
+  "Section": "V. EXPERIMENTS",
+  "content": "However, when QV block is integrated, ViT achieve better performances without any pre-training."
+},
+{
+  "Page_no": "9",
+  "Section": "V. EXPERIMENTS",
+  "content": "In fact, for Fashion-Mnist dataset, the best top-1 accuracy is achieved by the QV-ViT model."
+},
+{
+  "Page_no": "9",
+  "Section": "V. EXPERIMENTS",
+  "content": "Since ViTs models require significantly large training datasets for effective feature learning, ViT models struggle on the Oxford Flowers 102 dataset when trained from scratch due to the limited data."
+},
+{
+  "Page_no": "9",
+  "Section": "V. EXPERIMENTS",
+  "content": "ViT performed the worse on the Oxford Flowers 102."
+},
+{
+  "Page_no": "9",
+  "Section": "V. EXPERIMENTS",
+  "content": "However, when QV block is integrated, the ViT performance improved around 11.5% by the QV-ViT."
+},
+{
+  "Page_no": "9",
+  "Section": "V. EXPERIMENTS",
+  "content": "Finally, QV block is integrated into the CCTs."
+},
+{
+  "Page_no": "9",
+  "Section": "V. EXPERIMENTS",
+  "content": "Similar to ViT results, QV-CCT top-1 accuracies are significantly improved on all datasets ranging from 1% improvement to around 11% improvement."
+},
+{
+  "Page_no": "9",
+  "Section": "V. EXPERIMENTS",
+  "content": "On the Oxford Flowers 102, QV-CCT performed better than the QV-ViT (around 10% improvement)."
+},
+{
+  "Page_no": "9",
+  "Section": "V. EXPERIMENTS",
+  "content": "The results show that information wave feature maps generated by the proposed QV block can improve top-1 object recognition accuracies of different deep learning models including CNNs, vision transformers and convolutional vision transformers."
+},
+{
+  "Page_no": "9",
+  "Section": "V. EXPERIMENTS",
+  "content": "When training times are compared QV-CNN-Heavy and QV-CCT takes more time for training than other model variants."
+},
+{
+  "Page_no": "9",
+  "Section": "V. EXPERIMENTS",
+  "content": "Despite training times increase for all models with the QV block, top-1 accuracies also increase using the QV block."
+},
+{
+  "Page_no": "9",
+  "Section": "V. EXPERIMENTS",
+  "content": "Models with QV block consistently achieve higher top-1 accuracies compared to the same model without QV block as it is also demonstrated in Fig. 5."
+},
+{
+  "Page_no": "9",
+  "Section": "V. EXPERIMENTS",
+  "content": "In addition, by changing the design choices of the QV block, training times can be reduced further as we discuss in the ablation studies."
+},
+{
+  "Page_no": "9",
+  "Section": "V. EXPERIMENTS",
+  "content": "C. COMPARISON OF RESULTS WITH OTHER METHODS WITHOUT PRE-TRAINING"
+},
+{
+  "Page_no": "9",
+  "Section": "V. EXPERIMENTS",
+  "content": "In Table 2, QV models are compared with other well-known CNN and transformer models for object recognition without pre-training."
+},
+{
+  "Page_no": "10",
+  "Section": "V. EXPERIMENTS",
+  "content": "These results are taken from the papers; therefore, results are reported under different training setups."
+},
+{
+  "Page_no": "10",
+  "Section": "V. EXPERIMENTS",
+  "content": "Such setups include different number of epochs, different data augmentation techniques, learning schedulers, image size, etc."
+},
+{
+  "Page_no": "10",
+  "Section": "V. EXPERIMENTS",
+  "content": "Please note that QV model variants achieve competitive top-1 accuracies using standard data augmentation techniques."
+},
+{
+  "Page_no": "10",
+  "Section": "V. EXPERIMENTS",
+  "content": "They also perform well with learning schedules using a low number of epochs (e.g., 360 epochs)."
+},
+
+{
+  "Page_no": "11",
+  "Section": "V. EXPERIMENTS",
+  "content": "Therefore, our results are promising."
+},
+{
+  "Page_no": "11",
+  "Section": "V. EXPERIMENTS",
+  "content": "Please also note that, to ensure consistency in the evaluation setup, all QV and non-QV model variants are trained for 360 epochs."
+},
+{
+  "Page_no": "11",
+  "Section": "V. EXPERIMENTS",
+  "content": "Our observations indicate that learning stabilizes significantly for all models after this point, so the number of epochs is limited to 360."
+},
+{
+  "Page_no": "11",
+  "Section": "V. EXPERIMENTS",
+  "content": "D. DISCUSSION OF RESULTS"
+},
+{
+  "Page_no": "11",
+  "Section": "V. EXPERIMENTS",
+  "content": "In this work, we are proposing an entirely new perspective and a theory, QV theory in deep learning, for object recognition."
+},
+{
+  "Page_no": "11",
+  "Section": "V. EXPERIMENTS",
+  "content": "The proposed QV block converts still images of objects into information wave functions, which then input to various deep learning models rather than still images."
+},
+{
+  "Page_no": "11",
+  "Section": "V. EXPERIMENTS",
+  "content": "The proposed QV block can be integrated into various deep learning architectures including sequential CNNs, ViTs and CCVs."
+},
+{
+  "Page_no": "11",
+  "Section": "V. EXPERIMENTS",
+  "content": "Experiments on various datasets, namely Cifar-10, Cifar-100, Fashion Mnist and Oxford Flowers 102 using with and without QV blocks demonstrate that these QV model variants perform consistently better on various deep learning models compared to standalone versions (when still images are fed)."
+},
+{
+  "Page_no": "11",
+  "Section": "V. EXPERIMENTS",
+  "content": "Please note that results are without any transfer learning and all models are trained from scratch."
+},
+{
+  "Page_no": "11",
+  "Section": "V. EXPERIMENTS",
+  "content": "Particularly, QV-CNN-Heavy model achieved one of the best performances in Cifar-10, Cifar-100 and Oxford Flowers 102 datasets."
+},
+{
+  "Page_no": "11",
+  "Section": "V. EXPERIMENTS",
+  "content": "As well as, QV-ViT/8-8 achieved one of the best performances in the Fashion Mnist dataset without any pretraining."
+},
+
+{
+  "Page_no": "11",
+  "Section": "V. EXPERIMENTS",
+  "content": "In addition, even a light CNN model when integrated with QV block (QV-CNN-Light) achieved very competitive results compared to the state-of-the-art approaches."
+},
+{
+  "Page_no": "11",
+  "Section": "V. EXPERIMENTS",
+  "content": "Please also note that integrating the QV block to a lightweight CNN can boost the results compared to a heavyweight CNN."
+},
+{
+  "Page_no": "11",
+  "Section": "V. EXPERIMENTS",
+  "content": "For instance, the QV-CNN-Light model has around 28M parameters and performs 93.66% on Cifar-10 (Table 1), compared to the non-QV CNN-Heavy model with 100M parameters that achieves 92.15%."
+},
+{
+  "Page_no": "11",
+  "Section": "V. EXPERIMENTS",
+  "content": "Furthermore, accuracy improvement of ViTs and CCTs with and without QV block is greater compared to CNNs with and without QV block in all datasets as shown in Fig. 5."
+},
+{
+  "Page_no": "11",
+  "Section": "V. EXPERIMENTS",
+  "content": "We think that this performance improvement is due to the data-hungry nature of ViT and CCT models."
+},
+{
+  "Page_no": "11",
+  "Section": "V. EXPERIMENTS",
+  "content": "All experimented datasets are small to medium in size and the non-QV ViT and CCT models did not perform well."
+},
+{
+  "Page_no": "11",
+  "Section": "V. EXPERIMENTS",
+  "content": "On the other hand, with QV model variants of ViT and CCT, instead of feeding still images, 128 information waves are fed for each image that helps ViTs and CCTs to generalize better."
+},
+{
+  "Page_no": "11",
+  "Section": "V. EXPERIMENTS",
+  "content": "Another observation is that QV block helps to improve performance of different deep learning models on low-resolution images of Cifar-10, Cifar-100 and Fashion Mnist."
+},
+{
+  "Page_no": "11",
+  "Section": "V. EXPERIMENTS",
+  "content": "It also improves performance on high-resolution images of Oxford Flowers 102."
+},
+
+{
+  "Page_no": "11",
+  "Section": "V. EXPERIMENTS",
+  "content": "Finally, the QV model variants’ training times are higher compared to non-QV model variants’ training times."
+},
+{
+  "Page_no": "11",
+  "Section": "V. EXPERIMENTS",
+  "content": "However, this can be alleviated by changing the design choices of the QV block as we discuss below."
+},
+{
+  "Page_no": "11",
+  "Section": "V. EXPERIMENTS",
+  "content": "In this way, still competitive results can be achieved with more reasonable training times using the QV block."
+},
+{
+  "Page_no": "11",
+  "Section": "V. EXPERIMENTS",
+  "content": "E. ABLATION STUDIES FOR QV BLOCK DESIGN CHOICES"
+},
+{
+  "Page_no": "11",
+  "Section": "V. EXPERIMENTS",
+  "content": "In our QV block, different design choices exist, such as the number of branches determined by quantum numbers (m = ±1, ±2), the number of convolutional layers in each branch, and the number of information waves generated for each object (channel size of convolutional layers in branches)."
+},
+{
+  "Page_no": "11",
+  "Section": "V. EXPERIMENTS",
+  "content": "We provide throughout ablation studies to find out the best performing design choices."
+},
+{
+  "Page_no": "11",
+  "Section": "V. EXPERIMENTS",
+  "content": "In the ablation studies, we work with QV-CNN-Heavy model that consistently performs one of the best for CIFAR-10/100 and Fashion Mnist datasets."
+},
+{
+  "Page_no": "11",
+  "Section": "V. EXPERIMENTS",
+  "content": "All ablation studies (Table 3, 4 and 5) are conducted on CIFAR-10 dataset."
+},
+{
+  "Page_no": "11",
+  "Section": "V. EXPERIMENTS",
+  "content": "For the training of the models, we use the same hyperparameters as given in the experiments above."
+},
+{
+  "Page_no": "11",
+  "Section": "V. EXPERIMENTS",
+  "content": "Table 3 demonstrates the effect of number of convolutional layers in each branch of the QV block."
+},
+{
+  "Page_no": "11",
+  "Section": "V. EXPERIMENTS",
+  "content": "Initially, 1 conv layer is utilized in each branch."
+},
+{
+  "Page_no": "12",
+  "Section": "V. EXPERIMENTS",
+  "content": "Making a total of 8 conv layers in the QV block."
+},
+{
+  "Page_no": "12",
+  "Section": "V. EXPERIMENTS",
+  "content": "With 1 conv layer, training time is considerably faster (around 1m 37s for each epoch on CIFAR-10 dataset) and an accuracy of 94.04% is achieved."
+},
+{
+  "Page_no": "12",
+  "Section": "V. EXPERIMENTS",
+  "content": "When the number of conv layers in each branch increases, the training time and the accuracy also consistently increases as shown in Table 3."
+},
+{
+  "Page_no": "12",
+  "Section": "V. EXPERIMENTS",
+  "content": "Adding even more convolutional layers may add extra gains in the performance."
+},
+{
+  "Page_no": "12",
+  "Section": "V. EXPERIMENTS",
+  "content": "However, due to computational complexity of the model, we decided on 3 conv layers in each branch of QV block."
+},
+{
+  "Page_no": "12",
+  "Section": "V. EXPERIMENTS",
+  "content": "With 8 branches and 3 conv layers with learnable weights in each branch, a total of 24 conv layers exists in the QV block."
+},
+{
+  "Page_no": "13",
+  "Section": "V. EXPERIMENTS",
+  "content": "Next, the effect of conv layer channel (filter) size is experimented on CIFAR-10 dataset (Table 4)."
+},
+{
+  "Page_no": "13",
+  "Section": "V. EXPERIMENTS",
+  "content": "All convolutional layers in all branches have the same number of channels."
+},
+{
+  "Page_no": "13",
+  "Section": "V. EXPERIMENTS",
+  "content": "As it was explained before, we add the feature maps introduced by these branches to produce information wave feature maps of objects."
+},
+{
+  "Page_no": "13",
+  "Section": "V. EXPERIMENTS",
+  "content": "So, the number of conv layer channel numbers in branches is equal to the number of information waves we introduce for each object."
+},
+{
+  "Page_no": "13",
+  "Section": "V. EXPERIMENTS",
+  "content": "As the channel size increases, QV block obtains more information waves for feeding to different deep learning models."
+},
+{
+  "Page_no": "13",
+  "Section": "V. EXPERIMENTS",
+  "content": "In the experiment, we use 3 conv layers in each branch of QV block, since it gives the best performance."
+},
+{
+  "Page_no": "13",
+  "Section": "V. EXPERIMENTS",
+  "content": "For all conv layers, the same channel size is used (channel size is fixed)."
+},
+{
+  "Page_no": "13",
+  "Section": "V. EXPERIMENTS",
+  "content": "We trained the model with a small channel number first (i.e. 8), and then steadily increase the channel number as shown in Table 4."
+},
+{
+  "Page_no": "13",
+  "Section": "V. EXPERIMENTS",
+  "content": "Even with the smallest channel size of 8, QV-CNN-Heavy achieves an accuracy of 94.06% (with 1m 28s training for each epoch) on CIFAR-10 dataset that is higher than the accuracy of CNN-Heavy without QV block (92.15%)."
+},
+{
+  "Page_no": "13",
+  "Section": "V. EXPERIMENTS",
+  "content": "It demonstrates that QV block improves the standalone CNN-Heavy performance even with a small channel size."
+},
+{
+  "Page_no": "13",
+  "Section": "V. EXPERIMENTS",
+  "content": "As the channel size increases, accuracy improves."
+},
+{
+  "Page_no": "13",
+  "Section": "V. EXPERIMENTS",
+  "content": "With a channel size of 128, the top-1 accuracy of 94.35% is achieved."
+},
+{
+  "Page_no": "13",
+  "Section": "V. EXPERIMENTS",
+  "content": "We did not increase the channel size further since the increase in channel size causes considerably more computational complexity, and it takes more time to train the model from scratch."
+},
+{
+  "Page_no": "13",
+  "Section": "V. EXPERIMENTS",
+  "content": "Finally, the effect of number of branches determined by quantum numbers (m = ±1, ±2) in QV block is experimented (Table 5)."
+},
+{
+  "Page_no": "13",
+  "Section": "V. EXPERIMENTS",
+  "content": "Since 3 conv layers in each branch and 128 channel size (number of waves) give the best result, we only changed the number of branches in this experiment."
+},
+{
+  "Page_no": "13",
+  "Section": "V. EXPERIMENTS",
+  "content": "Initially, we implemented m = ±1 that contains 1 pixel shift of the image to the left, right, up and down (4 branches)."
+},
+{
+  "Page_no": "13",
+  "Section": "V. EXPERIMENTS",
+  "content": "We also experimented with only 2 pixel shifts (m = ±2) of the image to the left, right, up and down (4 branches)."
+},
+{
+  "Page_no": "13",
+  "Section": "V. EXPERIMENTS",
+  "content": "Finally, we show the original for m = ±1, ±2 (8 branches) for comparison."
+},
+{
+  "Page_no": "13",
+  "Section": "V. EXPERIMENTS",
+  "content": "As shown in Table 5, the best accuracy is obtained when m = ±1, ±2 (8 branches)."
+},
+{
+  "Page_no": "13",
+  "Section": "V. EXPERIMENTS",
+  "content": "In summary, the number of conv layers in a QV block branch, conv layer channel size and the number of branches affect the performance of the QV block (Fig. 6)."
+},
+{
+  "Page_no": "13",
+  "Section": "V. EXPERIMENTS",
+  "content": "Overall, ablation studies demonstrate that QV block achieves the best performance when there are 8 branches with 3 conv layers with learnable weights in each branch, and 128 channels in each conv layer."
+},
+{
+  "Page_no": "13",
+  "Section": "V. EXPERIMENTS",
+  "content": "This setting has higher training times per epoch compared to other QV block settings."
+},
+{
+  "Page_no": "13",
+  "Section": "V. EXPERIMENTS",
+  "content": "This is due to the nature of the QV block."
+},
+{
+  "Page_no": "13",
+  "Section": "V. EXPERIMENTS",
+  "content": "The proposed QV block adds a wide network of 8 branches as shown in Fig. 1."
+},
+{
+  "Page_no": "14",
+  "Section": "V. EXPERIMENTS",
+  "content": "In order to generate information waves of the objects, in every branch there are three conv layers, resulting in a total of 24 conv layers, which is the main cause of increase in training times."
+},
+{
+  "Page_no": "14",
+  "Section": "V. EXPERIMENTS",
+  "content": "In addition, the number of channels in each conv layer is 128, which also adds additional computational costs."
+},
+{
+  "Page_no": "14",
+  "Section": "V. EXPERIMENTS",
+  "content": "As it is shown above in detail, the training time can be optimized by changing the design choices of the QV block (Fig. 6)."
+},
+{
+  "Page_no": "14",
+  "Section": "V. EXPERIMENTS",
+  "content": "For instance, the training time of the CNN-Heavy model (without QV block) per epoch on CIFAR-10 dataset is 1 min 5 secs with an accuracy of 92.15% (Table 1)."
+},
+{
+  "Page_no": "14",
+  "Section": "V. EXPERIMENTS",
+  "content": "On the other hand, the training time of the QV-CNN-Heavy model on CIFAR-10 dataset (8 branches, 128 channel size/waves and 3 conv layers in each branch) is 3 mins 40 secs with an accuracy of 94.35% (more than 2.20% increase compared to the non-QV variant)."
+},
+{
+  "Page_no": "14",
+  "Section": "V. EXPERIMENTS",
+  "content": "When 4 branches are used instead of 8, training times per epoch reduce to 3 mins and 5 secs with an accuracy of 94.18% (2.03% increase compared to non-QV variant)."
+},
+{
+  "Page_no": "14",
+  "Section": "V. EXPERIMENTS",
+  "content": "When the 8 branches are kept but the channel size of conv layers in the branches is reduced to 16 from 128 waves, the training time is reduced to 1 min 32 secs with an accuracy of 94.11% (still 1.96% increase compared to without QV)."
+},
+{
+  "Page_no": "14",
+  "Section": "V. EXPERIMENTS",
+  "content": "Similarly, by changing the number of conv layers in each branch, training times can be reduced."
+},
+{
+  "Page_no": "14",
+  "Section": "V. EXPERIMENTS",
+  "content": "When 8 branches and 128 waves are kept but the number of conv layers in each branch is kept as 1, training of one epoch takes 1 min and 37 secs with an accuracy of 94.04% (1.89% improvement)."
+},
+{
+  "Page_no": "14",
+  "Section": "V. EXPERIMENTS",
+  "content": "Therefore, it is possible to use a QV block with different settings to optimize training time and yet improve the non-QV model accuracy with reasonable training times."
+},
+{
+  "Page_no": "15",
+  "Section": "VI. CONCLUSION AND FUTURE WORK",
+  "content": "In this work, Quantum Vision (QV) theory for object recognition is proposed that is inspired from the particle-wave duality of quantum-scale objects."
+},
+{
+  "Page_no": "15",
+  "Section": "VI. CONCLUSION AND FUTURE WORK",
+  "content": "The proposed QV theory provides a new perspective and dimension to computer vision by proposing QV block that creates information waves of objects as an input to various deep learning architectures such as Convolutional Neural Networks, vision transformers and convolutional vision transformers for object recognition."
+},
+{
+  "Page_no": "15",
+  "Section": "VI. CONCLUSION AND FUTURE WORK",
+  "content": "Extensive experiments on Cifar-10, Cifar-100, Fashion Mnist and Oxford Flowers 102 with and without QV blocks demonstrate that the proposed QV model variants perform consistently better on various deep learning models compared to standalone versions (when still images are fed)."
+},
+{
+  "Page_no": "15",
+  "Section": "VI. CONCLUSION AND FUTURE WORK",
+  "content": "In addition, QV block improves accuracy on both low- and high-resolution images."
+},
+{
+  "Page_no": "15",
+  "Section": "VI. CONCLUSION AND FUTURE WORK",
+  "content": "We believe that the proposed theory will contribute to the field."
+},
+{
+  "Page_no": "15",
+  "Section": "VI. CONCLUSION AND FUTURE WORK",
+  "content": "QV block can be integrated into a wide variety of applications of computer vision."
+},
+{
+  "Page_no": "15",
+  "Section": "VI. CONCLUSION AND FUTURE WORK",
+  "content": "In future, QV theory will be adapted to perform a single-stage object detection."
+},
+{
+  "Page_no": "15",
+  "Section": "VI. CONCLUSION AND FUTURE WORK",
+  "content": "We will target fast and effective object detection for real-time applications using QV theory."
+},
+{
+  "Page_no": "15",
+  "Section": "VI. CONCLUSION AND FUTURE WORK",
+  "content": "In addition, QV theory can be experimented on other data types, including speech and text."
+},
+{
+  "Page_no": "15",
+  "Section": "REFERENCES",
+  "content": "[1] A. Krizhevsky, I. Sutskever, and G. E. Hinton, ‘‘ImageNet classification with deep convolutional neural networks,’’ in Proc. Adv. Neural Inf. Process. Syst., 2012, pp. 1097–1105."
+},
+{
+  "Page_no": "15",
+  "Section": "REFERENCES",
+  "content": "[2] K. Simonyan and A. Zisserman, ‘‘Very deep convolutional networks for large-scale image recognition,’’ in Proc. ICLR, 2015, pp. 1–14."
+},
+{
+  "Page_no": "15",
+  "Section": "REFERENCES",
+  "content": "[3] C. Szegedy, W. Liu, Y. Jia, P. Sermanet, S. Reed, D. Anguelov, D. Erhan, V. Vanhoucke, and A. Rabinovich, ‘‘Going deeper with convolutions,’’ in Proc. IEEE Conf. Comput. Vis. Pattern Recognit. (CVPR), Jun. 2015, pp. 1–9."
+},
+{
+  "Page_no": "15",
+  "Section": "REFERENCES",
+  "content": "[4] K. He, X. Zhang, S. Ren, and J. Sun, ‘‘Deep residual learning for image recognition,’’ in Proc. IEEE Conf. Comput. Vis. Pattern Recognit. (CVPR), Jun. 2016, pp. 770–778."
+},
+{
+  "Page_no": "15",
+  "Section": "REFERENCES",
+  "content": "[5] S. Xie, R. Girshick, P. Dollár, Z. Tu, and K. He, ‘‘Aggregated residual transformations for deep neural networks,’’ in Proc. IEEE Conf. Comput. Vis. Pattern Recognit. (CVPR), Honolulu, HI, USA, Jul. 2017, pp. 5987–5995, doi: 10.1109/CVPR.2017.634."
+},
+{
+  "Page_no": "15",
+  "Section": "REFERENCES",
+  "content": "[6] G. Huang, Z. Liu, L. Van Der Maaten, and K. Q. Weinberger, ‘‘Densely connected convolutional networks,’’ in Proc. IEEE Conf. Comput. Vis. Pattern Recognit. (CVPR), Honolulu, HI, USA, Jul. 2017, pp. 2261–2269, doi: 10.1109/CVPR.2017.243."
+},
+{
+  "Page_no": "15",
+  "Section": "REFERENCES",
+  "content": "[7] A. G. Howard, M. Zhu, B. Chen, D. Kalenichenko, W. Wang, T. Weyand, M. Andreetto, and H. Adam, ‘‘MobileNets: Efficient convolutional neural networks for mobile vision applications,’’ in Proc. CVPR, Jun. 2017, pp. 1–9."
+},
+{
+  "Page_no": "15",
+  "Section": "REFERENCES",
+  "content": "[8] M. Tan and Q. Le, ‘‘EfficientNet: Rethinking model scaling for convolutional neural networks,’’ in Proc. 36th Int. Conf. Mach. Learn., 2019, pp. 6105–6114."
+},
+{
+  "Page_no": "15",
+  "Section": "REFERENCES",
+  "content": "[9] F. N. Iandola, M. W. Moskewicz, K. Ashraf, S. Han, W. J. Dally, and K. Keutzer, ‘‘SqueezeNet: AlexNet-level accuracy with 50x fewer parameters and <0.5MB model size,’’ in Proc. CVPR, Jun. 2016, pp. 1–13."
+},
+{
+  "Page_no": "15",
+  "Section": "REFERENCES",
+  "content": "[10] B. Zoph, V. Vasudevan, J. Shlens, and Q. V. Le, ‘‘Learning transferable architectures for scalable image recognition,’’ in Proc. IEEE/CVF Conf. Comput. Vis. Pattern Recognit., Jun. 2018, pp. 8697–8710."
+},
+{
+  "Page_no": "15",
+  "Section": "REFERENCES",
+  "content": "[11] F. Chollet, ‘‘Xception: Deep learning with depthwise separable convolutions,’’ in Proc. IEEE Conf. Comput. Vis. Pattern Recognit. (CVPR), Jul. 2017, pp. 1800–1807."
+},
+{
+  "Page_no": "15",
+  "Section": "REFERENCES",
+  "content": "[12] A. Vaswani, N. Shazeer, N. Parmar, J. Uszkoreit, L. Jones, A. N. Gomez, L. Kaiser, and I. Polosukhin, ‘‘Attention is all you need,’’ in Proc. Neural Inf. Process. Syst. (NeurIPS), 2017, pp. 5998–6008."
+},
+{
+  "Page_no": "15",
+  "Section": "REFERENCES",
+  "content": "[13] J. Devlin, M. W. Chang, K. Lee, and K. Toutanova, ‘‘BERT: Pre-training of deep bidirectional transformers for language understanding,’’ in Proc. NAACL-HLT, 2019, pp. 4171–4186."
+},
+{
+  "Page_no": "15",
+  "Section": "REFERENCES",
+  "content": "[14] T. B. Brown et al., ‘‘Language models are few-shot learners,’’ in Proc. Adv. Neural Inf. Process. Syst., 2020, pp. 1877–1901."
+},
+{
+  "Page_no": "15",
+  "Section": "REFERENCES",
+  "content": "[15] K. Han, Y. Wang, H. Chen, X. Chen, J. Guo, Z. Liu, Y. Tang, A. Xiao, C. Xu, Y. Xu, Z. Yang, Y. Zhang, and D. Tao, ‘‘A survey on vision transformer,’’ IEEE Trans. Pattern Anal. Mach. Intell., vol. 45, no. 1, pp. 87–110, Jan. 2023, doi: 10.1109/TPAMI.2022.3152247."
+},
+{
+  "Page_no": "15",
+  "Section": "REFERENCES",
+  "content": "[16] A. Dosovitskiy, L. Beyer, A. Kolesnikov, D. Weissenborn, X. Zhai, T. Unterthiner, M. Dehghani, M. Minderer, G. Heigold, S. Gelly, J. Uszkoreit, and N. Houlsby, ‘‘An image is worth 16×16 words: Transformers for image recognition at scale,’’ in Proc. 9th Int. Conf. Learn. Represent., May 2021, pp. 1–22."
+},
+{
+  "Page_no": "15",
+  "Section": "REFERENCES",
+  "content": "[17] K. Han, A. Xiao, E. Wu, J. Guo, C. Xu, and Y. Wang, ‘‘Transformer in transformer,’’ in Proc. Adv. Neural Inf. Process. Syst. (NeurIPS), Dec. 2021, pp. 15908–15919."
+},
+{
+  "Page_no": "15",
+  "Section": "REFERENCES",
+  "content": "[18] W. Wang, E. Xie, X. Li, D.-P. Fan, K. Song, D. Liang, T. Lu, P. Luo, and L. Shao, ‘‘Pyramid vision transformer: A versatile backbone for dense prediction without convolutions,’’ in Proc. IEEE/CVF Int. Conf. Comput. Vis. (ICCV), Oct. 2021, pp. 568–578."
+},
+{
+  "Page_no": "15",
+  "Section": "REFERENCES",
+  "content": "[19] H. Touvron, M. Cord, M. Douze, F. Massa, A. Sablayrolles, and H. Jégou, ‘‘Training data-efficient image transformers & distillation through attention,’’ in Proc. 38th Int. Conf. Mach. Learn., 2021, pp. 10347–10357."
+},
+{
+  "Page_no": "15",
+  "Section": "REFERENCES",
+  "content": "[20] H. Wu, B. Xiao, N. Codella, M. Liu, X. Dai, L. Yuan, and L. Zhang, ‘‘CvT: Introducing convolutions to vision transformers,’’ in Proc. IEEE/CVF Int. Conf. Comput. Vis. (ICCV), Oct. 2021, pp. 22–31."
+},
+{
+  "Page_no": "15",
+  "Section": "REFERENCES",
+  "content": "[21] A. Hassani, S. Walton, N. Shah, A. Abuduweili, J. Li, and H. Shi, ‘‘Escaping the big data paradigm with compact transformers,’’ 2021, arXiv:2104.05704."
+},
+{
+  "Page_no": "16",
+  "Section": "REFERENCES",
+  "content": "[22] S. D’Ascoli, H. Touvron, M. L. Leavitt, A. S. Morcos, G. Biroli, and L. Sagun, ‘‘ConViT: Improving vision transformers with soft convolutional inductive biases,’’ J. Stat. Mech., Theory Exp., vol. 2022, no. 11, Nov. 2022, Art. no. 114005."
+},
+{
+  "Page_no": "16",
+  "Section": "REFERENCES",
+  "content": "[23] A. Beiser, Concepts of Modern Physics, 5th ed., New York, NY, USA, McGraw-Hill Inc., 1995."
+},
+{
+  "Page_no": "16",
+  "Section": "REFERENCES",
+  "content": "[24] J. Nambu, What is Quantum Mechanics? A Physics Adventure, 5th ed., Belmont, MA, USA: Language Research Foundation, 2004."
+},
+{
+  "Page_no": "16",
+  "Section": "REFERENCES",
+  "content": "[25] M. Henderson, S. Shakya, S. Pradhan, and T. Cook, ‘‘Quanvolutional neural networks: Powering image recognition with quantum circuits,’’ Quantum Mach. Intell., vol. 2, no. 1, pp. 1–9, Jun. 2020."
+},
+{
+  "Page_no": "16",
+  "Section": "REFERENCES",
+  "content": "[26] I. Cong, S. Choi, and M. D. Lukin, ‘‘Quantum convolutional neural networks,’’ Nature Phys., vol. 15, no. 12, pp. 1273–1278, Dec. 2019, doi: 10.1038/s41567-019-0648-8."
+},
+{
+  "Page_no": "16",
+  "Section": "REFERENCES",
+  "content": "[27] R. Parthasarathy and R. T. Bhowmik, ‘‘Quantum optical convolutional neural network: A novel image recognition framework for quantum computing,’’ IEEE Access, vol. 9, pp. 103337–103346, 2021, doi: 10.1109/ACCESS.2021.3098775."
+},
+{
+  "Page_no": "16",
+  "Section": "REFERENCES",
+  "content": "[28] T. Hur, L. Kim, and D. K. Park, ‘‘Quantum convolutional neural network for classical data classification,’’ Quantum Mach. Intell., vol. 4, no. 1, pp. 1–18, Jun. 2022, doi: 10.1007/s42484-021-00061-x."
+},
+{
+  "Page_no": "16",
+  "Section": "REFERENCES",
+  "content": "[29] Y. Chen, ‘‘Quantum dilated convolutional neural networks,’’ IEEE Access, vol. 10, pp. 20240–20246, 2022, doi: 10.1109/ACCESS.2022.3152213."
+},
+{
+  "Page_no": "16",
+  "Section": "REFERENCES",
+  "content": "[30] A. Krizhevsky. (2009). Learning Multiple Layers of Features From Tiny Images. [Online]. Available: https://www.cs.toronto.edu/~kriz/learningfeatures-2009-TR.pdf"
+},
+{
+  "Page_no": "16",
+  "Section": "REFERENCES",
+  "content": "[31] H. Xiao, K. Rasul, and R. Vollgraf, ‘‘Fashion-MNIST: A novel image dataset for benchmarking machine learning algorithms,’’ 2017, arXiv:1708.07747."
+},
+{
+  "Page_no": "16",
+  "Section": "REFERENCES",
+  "content": "[32] A. Kolesnikov, L. Beyer, X. Zhai, J. Puigcerver, J. Yung, S. Gelly, and N. Houlsby, ‘‘Big transfer (BiT): General visual representation learning,’’ 2019, arXiv:1912.11370."
+},
+{
+  "Page_no": "16",
+  "Section": "REFERENCES",
+  "content": "[33] J. Deng, W. Dong, R. Socher, L.-J. Li, K. Li, and L. Fei-Fei, ‘‘ImageNet: A large-scale hierarchical image database,’’ in Proc. IEEE Conf. Comput. Vis. Pattern Recognit., Miami, FL, USA, Jun. 2009, pp. 248–255, doi: 10.1109/CVPR.2009.5206848."
+},
+{
+  "Page_no": "16",
+  "Section": "REFERENCES",
+  "content": "[34] M.-E. Nilsback and A. Zisserman, ‘‘Automated flower classification over a large number of classes,’’ in Proc. Indian Conf. Comput. Vision, Graph. Image Process., 2008, pp. 722–729, doi: 10.1109/ICVGIP.2008.47."
+},
+{
+  "Page_no": "16",
+  "Section": "REFERENCES",
+  "content": "[35] S. Liu and W. Deng, ‘‘Very deep convolutional neural network based image classification using small training sample size,’’ in Proc. 3rd IAPR Asian Conf. Pattern Recognit. (ACPR), Nov. 2015, pp. 730–734, doi: 10.1109/ACPR.2015.7486599."
+},
+{
+  "Page_no": "16",
+  "Section": "REFERENCES",
+  "content": "[36] K. He, X. Zhang, S. Ren, and J. Sun, ‘‘Identity mappings in deep residual networks,’’ in Proc. ECCV, Oct. 2016, pp. 630–645, doi: 10.1007/978-3-319-46493-0_38."
+},
+{
+  "Page_no": "16",
+  "Section": "REFERENCES",
+  "content": "[37] E. Schrödinger, ‘‘Quantisierung als eigenwertproblem,’’ Annalen der Physik, vol. 386, no. 18, pp. 109–139, Jan. 1926."
+},
+{
+  "Page_no": "16",
+  "Section": "REFERENCES",
+  "content": "[38] M. Nilsback and A. Zisserman, ‘‘The Oxford Flowers 102 dataset,’’ in Proc. CVPR, 2008, pp. 1–8."
+},
+{
+  "Page_no": "16",
+  "Section": "AUTHOR BIOGRAPHY",
+  "content": "CEM DIREKOGLU received the B.Sc. and M.Sc. degrees in electrical and electronics engineering from Eastern Mediterranean University."
+},
+{
+  "Page_no": "16",
+  "Section": "AUTHOR BIOGRAPHY",
+  "content": "He received the Ph.D. degree in computer vision from the University of Southampton, U.K., in 2009."
+},
+{
+  "Page_no": "16",
+  "Section": "AUTHOR BIOGRAPHY",
+  "content": "From 2009 to 2010, he was a Postdoctoral Researcher with the School of Computer Science and Statistics, Trinity College Dublin."
+},
+{
+  "Page_no": "16",
+  "Section": "AUTHOR BIOGRAPHY",
+  "content": "From 2010 to 2014, he was a Postdoctoral Researcher with the INSIGHT Centre for Data Analytics, Dublin City University."
+},
+{
+  "Page_no": "16",
+  "Section": "AUTHOR BIOGRAPHY",
+  "content": "Since 2014, he has been a full-time Faculty Member with the Electrical and Electronics Engineering (EEE) Department."
+},
+{
+  "Page_no": "16",
+  "Section": "AUTHOR BIOGRAPHY",
+  "content": "He is part of the Middle East Technical University-Northern Cyprus Campus (METU NCC)."
+},
+
+{
+  "Page_no": "16",
+  "Section": "AUTHOR BIOGRAPHY",
+  "content": "He is currently an Associate Professor and the Head of the EEE Department."
+},
+{
+  "Page_no": "16",
+  "Section": "AUTHOR BIOGRAPHY",
+  "content": "He is also the Co-Founding Director of Vindio AI Software Ltd."
+},
+{
+  "Page_no": "16",
+  "Section": "AUTHOR BIOGRAPHY",
+  "content": "His current research interests include computer vision, deep learning, and signal processing."
+},
+{
+  "Page_no": "16",
+  "Section": "AUTHOR BIOGRAPHY",
+  "content": "MELIKE SAH received the B.Sc. and M.Sc. degrees in computer engineering from Eastern Mediterranean University, North Cyprus, and the Ph.D. degree in computer science from the University of Southampton, U.K., in 2009."
+},
+{
+  "Page_no": "16",
+  "Section": "AUTHOR BIOGRAPHY",
+  "content": "She was a Postdoctoral Researcher with Trinity College Dublin, Ireland, from 2009 to 2014."
+},
+{
+  "Page_no": "16",
+  "Section": "AUTHOR BIOGRAPHY",
+  "content": "She is currently a Professor with Cyprus International University, North Cyprus."
+},
+{
+  "Page_no": "16",
+  "Section": "AUTHOR BIOGRAPHY",
+  "content": "She is also the Co-Founding Director of Vindio AI Software Ltd."
+},
+{
+  "Page_no": "16",
+  "Section": "AUTHOR BIOGRAPHY",
+  "content": "Her current research interests include artificial intelligence, deep learning, computer vision, and biomedical signal/data analysis."
+},
+{
+  "Page_no": "16",
+  "Section": "AUTHOR BIOGRAPHY",
+  "content": "She served as an Associate Editor for IEEE TRANSACTIONS ON BIG DATA and IEEE TRANSACTIONS ON ARTIFICIAL INTELLIGENCE."
+}
+
+  
+]

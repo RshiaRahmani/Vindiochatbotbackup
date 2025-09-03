@@ -1,0 +1,207 @@
+[
+  {
+    "Question": "What's the Company's name?",
+    "Answer": "Vindio AI Software Ltd"
+  },
+  {
+    "Question": "Where is company's office or base?",
+    "Answer": "Vindio AI is a Cyprus-based deep-tech R&D company operating in ODTU KALTEV Technopark"
+  },
+  {
+    "Question": "What is Vindio AI developing or working on?",
+    "Answer": "Company is the inventor of the Quantum Vision (QV) Theory in deep learning. They work on various applications of QV for image and speech data, custom trained AI Chatbot deployment, computer vision based systems, such as vision only driver warning systems, intelligent surveillance monitoring and AI integration and data analysis systems for businesses of all sizes."
+  },
+  {
+    "Question": "Who are the founders of Vindio AI Software?",
+    "Answer": "It was founded by Assoc. Prof. Dr. Cem Direkoglu and Prof. Dr. Melike Sah Direkoglu. Their focus and innpvation spans Quantum Vision Theory, ADAS, autonomous driving, LLM, AI Chatbots/Agentic AI, surveillance, and smart mobility."
+  },
+    {
+    "Question": "What services do you provide?",
+    "Answer": "We offer AI chatbot development, computer vision solutions, deployment of Quantum Vision deep learning approaches, machine learning applications, custom AI software tailored to your business needs, and consultancy services"
+  },
+  {
+    "Question": "What is the Vindio AI Chatbot?",
+    "Answer": "The Vindio AI Chatbot is a smart assistant tailored and customly trained on your website or documents in order to answer customer queries, provide product information, automate support, and integrate with your website or internal systems"
+  },
+  {
+    "Question": "Can the chatbot handle multiple languages?",
+    "Answer": "Yes, our chatbot supports multiple languages and can be trained to understand and respond in your preferred language(s)"
+  },
+  {
+    "Question": "Is my data secure?",
+    "Answer": "Absolutely. We follow strict security and privacy protocols to ensure your data is protected and compliant with regulations like GDPR"
+  },
+  {
+    "Question": "How is the chatbot trained?",
+    "Answer": "The chatbot learns from your documents, website content, and FAQs. We fine-tune it with the most recent and advanced AI models to match your brand’s tone and style"
+  },
+  {
+    "Question": "How can I get started?",
+    "Answer": "You can contact us via our website's contact form or email us directly at info@vindioai.com or cdirekoglu@gmail.com to discuss your needs and request a free demo"
+  },
+  {
+    "Question": "How can I contact?",
+    "Answer": "You can contact us via our website's contact form, or email us directly at info@vindioai.com or cdirekoglu@gmail.com to discuss your needs"
+  },
+  {
+    "Question": "What is the price of custom trained AI Chatbot to my website or for my company documents?",
+    "Answer": "We offer affordable prices that includes one-time installation-webpage-document training fee (fee changes depending on the number of pages or documents you have). Plus, there is monthly server costs to host your custom trained AI Chatbot API to your website and storage costs for data logging. Monthly fees are very reasonable for small to medium-sized businesses. Please directly contact by email to cdirekoglu@gmail.com or by phone to +90 542 855 3716 to get the best offers according to your needs"
+  },
+  {
+    "Question": "What type of consultancy provided by Vindio AI?",
+    "Answer": "Team of experts provide support and consultany for custom trained Quantum Vision Theory implementations, LLM projects development and deployement, computer vision applications/deployment, integration of AI to existing systems using the state of the art AI and deep learning approaches, front-end and back-end implementations and software integration support"
+  },
+  {
+    "Question": "What is Quantum Vision Theory?",
+    "Answer": "Quantum vision theory, in the context of deep learning, proposes a novel approach to object recognition by leveraging the particle-wave duality of quantum physics. It suggests that objects, even at human-scale, possess wave functions, and these wave functions, rather than static images, can be used as input for deep neural networks. This approach aims to capture more information about the object, potentially leading to improved object recognition accuracy."
+  },
+  {
+    "Question": "What license will Quantum Vision Theory (QV) codes have?",
+    "Answer": "AGPL (Affero General Public License)-3.0 for research and non-commercial use."
+  },
+  {
+    "Question": "What is AGPL license?",
+    "Answer": "AGPL (Affero General Public License) is a license for research and non-commercial use. You are free to use, modify, and share the code and models under the terms of the AGPL-3.0 license. However, if you create any derivative works or deploy them (including via a network service), you must release your modifications and the full source code under the same AGPL-3.0 license. For commercial or closed-source usage, if you want to integrate Quantum Vision Theory into a closed-source or proprietary product without releasing your source code, you must obtain an Enterprise License from the Vindio AI Software Ltd. Contact us at info@vindioai.com for enterprise pricing and terms. We offer affordable enterprise licences with companies of different sizes"
+  },
+  {
+    "Question": "What will the QV Python library be called?",
+    "Answer": "vindioai"
+  },
+  {
+    "Question": "What is particle-wave duality and how does it inspire QV theory?",
+    "Answer": "In quantum physics, quantum-scale objects can behave as waves when unobserved and as particles when measured. QV theory applies this analogy to human-scale objects, suggesting that they may have wave-like representations containing richer information than still images."
+  },
+  {
+    "Question": "How does QV theory relate to human vision?",
+    "Answer": "In human vision, light waves enter the eye, pass through biological neurons, and collapse into solid objects in the visual cortex. QV theory mimics this by creating wave-like representations of objects before classification in deep learning models."
+  },
+  {
+    "Question": "What is the QV block?",
+    "Answer": "The QV block is a mathematical model in deep learning that converts still images into information wave functions inspired by quantum physics. These wave functions are then fed into DNNs instead of the original images."
+  },
+  {
+    "Question": "What are the main contributions of the QV Theory?",
+    "Answer": "Introduction of Quantum Vision theory for object recognition.  Development of the QV block to convert images into information wave functions. Demonstration of QV integration into CNNs, ViTs, and CCTs. Experimental evidence of improved accuracy across datasets."
+  },
+  {
+    "Question": "Which deep learning architectures can integrate the QV block?",
+    "Answer": "The QV block can be integrated into convolutional neural networks (CNNs), Vision Transformers (ViTs), and Convolutional Vision Transformers (CCTs)."
+    },
+  {
+    "Question": "How to install and import QVBlock to my Python code?",
+    "Answer": "First 'pip install vindioai' . Then in your Python code import the following: import vindioai,  from vindioai import QVBlock, Init_Freeze_ShiftSubtract_Layers. Then you can integrate the QVBlock into your code"
+  },
+  {
+    "Question": "In QV (Quantum Vision) theory, I feed object images or information waves of objects to deep neural networks?",
+    "Answer": "In QV, object images are converted to information waves, and these information waves are fed to deep neural networks rather than still images"
+  },
+  {
+    "Question": "QVBlock can be integrated to which deep learning architectures?",
+    "Answer": "QVBlock can be integrated to CNNs, vision transformers and convolutional vision transformer to generate QV model variants for object classification"
+  },
+  {
+    "Question": "How does QV theory differ from other Quantum circuit approaches?",
+    "Answer": "QV theory does not run on quantum hardware. Instead, it uses deep learning to mathematically create 'information wave functions' from still images, inspired by quantum particle-wave duality. These wave functions are then fed into DNNs for classification."
+  },
+  {
+    "Question": "Does QV theory require a quantum computer?",
+    "Answer": "No. QV theory is implemented on classical deep learning architectures, such as CNNs, Vision Transformers, and Convolutional Vision Transformers."
+  },
+  {
+    "Question": "What is the main conceptual difference between QV theory and QCNN?",
+    "Answer": "QCNN designs convolution and pooling operations as quantum circuits for quantum computing, while QV theory mathematically transforms classical images into wave functions for use in conventional deep learning models."
+  },
+  {
+    "Question": "What is the performance of QV model variants for object recognition?",
+    "Answer": "Extensive experiments on CIFAR-10, CIFAR-100, FashionMnist and Oxford-Flowers datasets demonstrate that QV model variants perform consistently better than standalone versions"
+  },
+  {
+    "Question": "How did the QV block affect CNN models?",
+    "Answer": "The QV block improved top-1 accuracy for all CNN variants. For example, QV-CNN-Heavy achieved 94.35% on CIFAR-10 (+2.2%), 71.17% on CIFAR-100 (+4.19%), and 62% on Oxford Flowers 102 (+5.2%) without pre-training. QV-CNN-Light also outperformed CNN-Light by ~2% on CIFAR-10/100, ~0.5% on Fashion-MNIST, and +10.77% on Oxford Flowers 102."
+  },
+  {
+    "Question": "How did the QV block affect Vision Transformers (ViTs)?",
+    "Answer": "QV-ViT models saw significant gains: 85.78% to 91.00% on CIFAR-10, 59.02% to 67.99% on CIFAR-100, and 93.28% to 95.2% on Fashion-MNIST, all without pre-training. On Oxford Flowers 102, ViT struggled due to limited data, but QV-ViT still improved performance by ~11.5%."
+  },
+  {
+    "Question": "How did the QV block affect Convolutional Vision Transformers (CCTs)?",
+    "Answer": "QV-CCT models improved accuracy by 1% to ~11% across datasets. On Oxford Flowers 102, QV-CCT outperformed QV-ViT with around a 10% improvement."
+  },
+  {
+    "Question": "Which model achieved the best performance on Fashion-MNIST?",
+    "Answer": "The QV-ViT model achieved the highest top-1 accuracy on Fashion-MNIST at 95.2%."
+  },
+  {
+    "Question": "What trade-off was observed when using the QV block?",
+    "Answer": "Training times increased for all models with the QV block, particularly for QV-CNN-Heavy and QV-CCT. However, the consistent accuracy gains outweighed the longer training times."
+  },
+  {
+    "Question": "Can I apply QV to other classification tasks?",
+    "Answer": "Yes, QV theory can be applied to speech recognition, and may be other domains. The research is currently ongoing, start using QV codes and share your results with the world."
+  },
+  {
+    "Question": "Were transfer learning or pre-training used in the experiments?",
+    "Answer": "No. All models were trained from scratch without any transfer learning."
+  },
+  {
+    "Question": "Which models achieved the best results?",
+    "Answer": "QV-CNN-Heavy achieved top performances on CIFAR-10, CIFAR-100, and Oxford Flowers 102, while QV-ViT/8-8 achieved the best result on Fashion-MNIST without pre-training."
+  },
+  {
+    "Question": "Can a lightweight CNN with QV block outperform a heavyweight CNN without it?",
+    "Answer": "Yes. For example, QV-CNN-Light (28M parameters) achieved 93.66% on CIFAR-10, outperforming a non-QV CNN-Heavy (100M parameters) at 92.15%."
+  },
+  {
+    "Question": "Which model types benefit most from the QV block?",
+    "Answer": "ViTs and CCTs show greater accuracy improvement than CNNs when using the QV block, likely due to their data-hungry nature and the richer input from information waves."
+  },
+  {
+    "Question": "How many information waves are used per image in CNN, ViT and CCT QV models?",
+    "Answer": "Each image is represented by 128 information waves instead of a single still image."
+  },
+  {
+    "Question": "Does the QV block help with both low- and high-resolution images?",
+    "Answer": "Yes. QV improves performance on low-resolution datasets like CIFAR-10/100 and Fashion-MNIST, as well as high-resolution datasets like Oxford Flowers 102."
+  },
+  {
+    "Question": "In QV, what is the meaning of momentum magnitude?",
+    "Answer": "Momentum magnitude is a quantum number representing the direction and magnitude of motion. For example, if momentum magnitude m=2, it means that amount of motion is +-1 and +-2. Shift and substract kernels will apply a motion of +-1 and +-2"
+  },
+  {
+    "Question": "Can I modify the number of branches in a QVBlock?",
+    "Answer": "Yes, you can modify. Amd it is directly related to the momentum magnitude, m, parameter. If momentum magnitude is [1, 2] or [2, 4], there are eight branches with either +-1 and +-2 ShiftSubtract kernels OR +-2 and +-4 ShiftSubtract kernels. "
+  },
+  {
+    "Question": "Does the QV block improve performance even with a small channel size, wave number?",
+    "Answer": "Yes. Even with 8 channels/waves, QV-CNN-Heavy achieved 94.06%, outperforming the CNN-Heavy without QV (92.15%)."
+  },
+  {
+    "Question": "How to optimize or it is possible to optimize QV Model training times?",
+    "Answer": "Yes, there are three alternatives: Option 1- You reduce the number of conv layers in QV branches. Option 2- Change the wave parameter to a lower number. Default is 128 waves, you can make it 64, 32, 16, even 8. Option 3 - Instead of 8 braches with momentum direction of [1, 2] or [2, 4], you can try four branches with [1] or [2]"
+  },
+  {
+    "Question": "Which input image sizes are supported by QV Theory?",
+    "Answer": "You can try [64, 64, 3] for small image sizes and [224, 224, 3] for larger image sizes"
+  },
+  {
+    "Question": "What is the optimal QV block configuration found in the QV paper?",
+    "Answer": "8 branches, 3 convolutional layers per branch, and 128 channels/waves per conv layer."
+  },
+  {
+    "Question": "How can training time be reduced while still gaining accuracy benefits from QV?",
+    "Answer": "By reducing the number of branches, channel size, or convolutional layers per branch. For example, using 4 branches reduces training time to 3m 5s with 94.18% accuracy, or reducing channel size to 16 waves lowers time to 1m 32s with 94.11% accuracy on CIFAR-10."
+  },
+  {
+    "Question": "Which paper to cite for the Quantum Vision Theory?",
+    "Answer": "C. Direkoglu and M. Sah, \"Quantum Vision Theory in Deep Learning for Object Recognition,\" IEEE Access, vol. 13, pp. 132194–132208, 2025. doi: 10.1109/ACCESS.2025.3592037"
+  }, 
+  {
+    "Question": "What is the purpose of the QV Hub website?",
+    "Answer": "To allow users to create a QV community: Access and share QV models, example codes, news, publications, tutorials, and results. Rate content and get feedback from the community"
+  }
+  ,
+  {
+    "Question": "Is registration to QV Hub free?",
+    "Answer": "Yes, QV Hub registrations are free. There are also subscription and enterprise tiers with extra support and features"
+  }
+]
