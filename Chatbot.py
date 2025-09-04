@@ -15,6 +15,11 @@ from typing import Dict, List, Optional, Any
 import requests
 import json
 import logging
+from dotenv import load_dotenv
+
+# Load environment variables from .env file
+load_dotenv()
+
 from sqlalchemy import text as _sql_texts
 from db import (
     get_or_create_user,
